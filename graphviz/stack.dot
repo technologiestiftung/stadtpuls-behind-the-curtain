@@ -1,0 +1,41 @@
+digraph G {
+
+  rankdir=LR;
+  edge [dir=none];
+  node [shape=rectangle, width=1.9, fixedsize=true];
+
+
+{
+  vercel [label="vercel.com\n{Frontend}"];
+  render [label="render.com\n{API}"];
+  supabase [label="supabase.io\n{DB & Auth}"];
+
+}
+{
+  frontend [label="stadtpuls.com"];
+  backend [label="api.stadtpuls.com"];
+}
+{
+  node [style=dashed];
+  next [label="Next.js"];
+  fastify [label="Fastify.js"];
+}
+{
+  node [];
+}
+
+
+  frontend -> {supabase vercel};
+{
+  edge[style=dashed];
+  frontend -> next;
+  backend -> fastify;
+  }
+  backend -> {render supabase};
+  frontend -> backend [dir=none];
+
+
+  {rank=same; frontend ; backend; }
+  {rank=min; next; fastify;}
+  {rank=max; vercel ; render; supabase;}
+}

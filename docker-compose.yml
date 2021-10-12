@@ -1,0 +1,16 @@
+version: "3"
+services:
+  pandoc:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    volumes:
+      - ./:/data
+    entrypoint: make build
+  # graphviz:
+  #   build:
+  #     dockerfile: graphviz/Dockerfile
+  #     context: .
+  #   volumes:
+  #     - ./:/data
+  #   entrypoint: make graph
