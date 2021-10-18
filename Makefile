@@ -7,7 +7,10 @@ build:
 	--standalone \
 	--output=docs/index.html \
 	src/slides.md \
-	--metadata title="Behind the Curtain" \
+	--metadata title="[api.]stadtpuls.com" \
+	--metadata subtitle="/behind/the/curtain" \
+	--metadata author="Fabian Morón Zirfas" \
+	--metadata date="2021-10-20" \
 	--slide-level=2 \
 	--variable theme=simple \
 	--variable height="'100%'" \

@@ -256,6 +256,10 @@ body {
   display: inline-block;
 }
 
+.reveal blockquote {
+  box-shadow: none;
+}
+
 .reveal q {
   font-style: italic;
 }
@@ -418,4 +422,10 @@ figure {
 
 li {
   list-style-type: "‣ ";
+}
+
+/* OVERWRITES */
+
+h1.title#meta-title {
+  text-transform: none;
 }

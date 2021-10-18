@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>Behind the Curtain</title>
+  <meta name="author" content="Fabian Morón Zirfas">
+  <meta name="dcterms.date" content="2021-10-20">
+  <title>[api.]stadtpuls.com</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -43,16 +45,15 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">Behind the Curtain</h1>
+  <h1 class="title" id="meta-title">[api.]stadtpuls.com</h1>
+  <p class="subtitle">/behind/the/curtain</p>
+  <p class="author">Fabian Morón Zirfas</p>
+  <p class="date">2021-10-20</p>
 </section>
 
 <section class="slide level2">
 
 <p><img src="./assets/images/logo-sprite.svg" width="500px"></p>
-<ul>
-<li>Behind the Curtain</li>
-<li>20.10.2021</li>
-</ul>
 <aside class="notes">
 Shhh, these are your private notes 📝
 </aside>
@@ -63,6 +64,7 @@ Shhh, these are your private notes 📝
 <li>Senior Creative Technologist</li>
 <li><span class="citation" data-cites="Ideation">@Ideation</span> &amp; Prototyping Lab</li>
 <li><span class="citation" data-cites="Technologiestiftung">@Technologiestiftung</span> Berlin</li>
+<li>GitHub: <span class="citation" data-cites="ff6347">@ff6347</span></li>
 </ul>
 <aside class="notes">
 <p>Jack of all Trades Master of None.</p>
@@ -73,39 +75,90 @@ Shhh, these are your private notes 📝
 <section id="t.o.c." class="title-slide slide level1">
 <h1>T.O.C.</h1>
 <ul>
-<li>Der Tech-Stack!</li>
-<li>Was Ist Supabase?</li>
+<li>Der Stadtpuls Tech Stack!</li>
+<li>WzT Supabase?</li>
 <li>Warum Supabase?</li>
 <li>Q &amp; A</li>
 </ul>
 <aside class="notes">
-<p>Wenn ich zu schnell bin sagen sie mir Bescheid oder wenn ich etwas anders erklären soll. Eine Diskussion können wir gerne im QA führen.</p>
-<p>Die Präsentation finden Sie auch online hinter diesem Link.</p>
+<p>Wenn ich zu schnell bin sagen sie mir Bescheid oder wenn ich etwas anders erklären soll. Eine Diskussion können wir gerne im QA führen. Die Präsentation finden Sie auch online hinter diesem Link.</p>
 </aside>
 </section>
-<section id="der-tech-stack" class="slide level2">
-<h2>Der Tech-Stack</h2>
+<section id="der-stadtpuls-tech-stack" class="slide level2">
+<h2>Der Stadtpuls Tech Stack</h2>
 </section>
 <section class="slide level2">
 
-<section data-background="assets/images/stadtpuls.com-tech-stack@2x.png">
+<p><img style="position:absolute;left:0;top:0;width:1920px;height:1080px" src="assets/images/stadtpuls.com-tech-stack.png"></p>
+<aside class="notes">
+<p>Von Links</p>
+<p>Frameworks:</p>
+<ul>
+<li>Next.js Frontend (React) deployed auf vercel.com</li>
+<li>Fastify.js Backend (Node.js) deployed auf render.com</li>
+<li>Beide sprechen mit Supabase</li>
+</ul>
+</aside>
+</section>
+<section id="was-zum-teufel-wzt-ist" class="slide level2">
+<h2>Was zum Teufel (WzT) ist</h2>
+<p><img style="width:80%" src="assets/images/supabase-logo-wordmark--light.png"></p>
+<aside class="notes">
+Da stellt sich die Frage WzT
+</aside>
 </section>
 <section class="slide level2">
 
-<p><img data-src="assets/images/supabase-logo-wordmark--light.png" /></p>
-</section>
-<section id="was-ist-supabase" class="slide level2">
-<h2>Was Ist Supabase?</h2>
 <blockquote>
 <p>Supabase is an open source Firebase alternative.</p>
 </blockquote>
+<aside class="notes">
+<p>Selber sagen sie, sie sind eine Firebase alternative.</p>
+</aside>
+</section>
+<section id="open-sourceopen-core-startup" class="slide level2">
+<h2>Open Source/Open Core Startup</h2>
+<aside class="notes">
+<p>Supabase ist ein Open Source Open Core Startup aus USA CA welches komplett remote arbeitet. Die Supabase ist noch in public Beta das bereits $30 Millionen Series A Funding erhalten hat</p>
+</aside>
 </section>
 <section class="slide level2">
 
 <p><img data-src="assets/images/supabase-tech.png" /></p>
+<aside class="notes">
+<ul>
+<li>Kong (API Gateway)</li>
+<li>GoTrue (Auth System by Netlify)</li>
+<li>Realtime (Elixir mit Phoenix Framework)</li>
+<li>PostgREST (Automitische REST API for postgres DB)</li>
+<li>pg-meta (Custom Postgres DBs Management API)</li>
+<li>Postgres (DB mit nem Haufen Extensions)</li>
+</ul>
+</aside>
+</section>
+<section id="batteries-included" class="slide level2">
+<h2>Batteries Included</h2>
+<aside class="notes">
+<p>Supabase kommt</p>
+<ul>
+<li>mit einer API für die DB (ohne eine Zeile Code)</li>
+<li>mit SDKs für JS (offiziel) + C#, Python, Rust, Kotlin, Dart community</li>
+<li>mit Authentication System (Bist du du?)</li>
+<li>mit Authorization via Postgres RLS (Darfst du das?)</li>
+<li>mit Storage (AWS S3?)</li>
+<li>mit Realtime Pub/Sub (Postgres Changes -&gt; Websocket)</li>
+<li>bald mit serverless functions</li>
+</ul>
+</aside>
 </section>
 <section id="warum-supabase" class="slide level2">
 <h2>Warum Supabase?</h2>
+<aside class="notes">
+<ul>
+<li>Alles was das Core Produkt ausmacht ist OSS</li>
+<li>Selbst wenn Google morgen alles kauft und abschaltet kann ich den Tech Stack weiter verwenden</li>
+</ul>
+</aside>
 </section></section>
 <section id="q-a" class="title-slide slide level1">
 <h1>Q &amp; A</h1>
@@ -131,10 +184,83 @@ Shhh, these are your private notes 📝
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
+        // Determines whether slide content should be vertically centered
+        center: true,
+        // Display controls in the bottom right corner
+        controls: true,
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+        // Display a presentation progress bar
+        progress: true,
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
         // Push each slide change to the browser history
         history: true,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+        // Enable the slide overview mode
+        overview: true,
+        // Vertical centering of slides
+        center: true,
+        // Enables touch navigation on devices with touch input
+        touch: true,
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+        // Turns fragments on and off globally
+        fragments: true,
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+       // Flags if it should be possible to pause the presentation (blackout)
+       pause: true,
+        // Global override for autoplaying embedded media (video/audio/iframe)
+        // - null: Media will only autoplay if data-autoplay is present
+        // - true: All media will autoplay, regardless of individual setting
+        // - false: No media will autoplay, regardless of individual setting
+        autoPlayMedia: null,
+        // Global override for preloading lazy-loaded iframes
+        // - null: Iframes with data-src AND data-preload will be loaded when within
+        //   the viewDistance, iframes with only data-src will be loaded when visible
+        // - true: All iframes with data-src will be loaded when within the viewDistance
+        // - false: All iframes with data-src will be loaded only when visible
+        preloadIframes: null,
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
         // Transition style
         transition: 'fade', // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
@@ -145,6 +271,8 @@ Shhh, these are your private notes 📝
         // Bounds for smallest/largest possible scale to apply to content
         minScale: 1,
         maxScale: 1,
+        // The display mode that will be used to show slides
+        display: 'block',
 
         // reveal.js plugins
         plugins: [
