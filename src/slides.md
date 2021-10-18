@@ -44,7 +44,7 @@ Die Präsentation finden Sie auch online hinter diesem Link.
 
 ---
 
-<img style="position:absolute;left:0;top:0;width:1920px;height:1080px" src="assets/images/stadtpuls.com-tech-stack.png">
+<img style="position:absolute;left:0;top:0;width:1920px;height:1080px" src="assets/images/stadtpuls.com-tech-stack-cheat.png">
 
 <aside class="notes">
 Von Links
@@ -55,7 +55,13 @@ Frameworks:
 * Fastify.js Backend (Node.js) deployed auf render.com
 * Beide sprechen mit Supabase
 
+BTW (ich habe ein wenig gecheated)
 </aside>
+
+---
+
+<img style="position:absolute;left:0;top:0;width:1920px;height:1080px" src="assets/images/stadtpuls.com-tech-stack-real.png">
+
 
 ## Was zum Teufel (WzT) ist
 
@@ -74,7 +80,14 @@ Selber sagen sie, sie sind eine Firebase alternative.
 
 </aside>
 
-## Open Source/Open Core Startup
+## Open Source/Open Core
+### B.a.a.S.\* Startup
+
+<br>
+<br>
+<br>
+
+\* Backend as a Service
 
 <aside class="notes">
 
