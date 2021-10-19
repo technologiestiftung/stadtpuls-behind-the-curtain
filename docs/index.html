@@ -121,9 +121,17 @@ Shhh, these are your private notes 📝
 <section id="lucas-vogel" class="slide level2">
 <h2>Lucas Vogel</h2>
 <ul>
-<li>TODO</li>
+<li>UI/UX Designer &amp; Frontend Developer</li>
+<li><span class="citation" data-cites="Ideation">@Ideation</span> &amp; Prototyping Lab</li>
+<li><span class="citation" data-cites="Technologiestiftung">@Technologiestiftung</span> Berlin</li>
+<li>GitHub: <span class="citation" data-cites="vogelino">@vogelino</span></li>
 </ul>
 <aside class="notes">
+<ul>
+<li>Aus der Schweiz &amp; Chile</li>
+<li>In Berlin seit 10 Jahre</li>
+<li>Im CityLAB seit Februar</li>
+</ul>
 </aside>
 </section>
 <section>
@@ -136,6 +144,7 @@ Shhh, these are your private notes 📝
 <li>Qualitätssicherung</li>
 </ul>
 <aside class="notes">
+<p>Speaker: Fabian</p>
 <p>Wenn wir zu schnell sind sagt uns Bescheid oder wenn wir etwas anders erklären soll. Eine Diskussion können wir gerne im QA führen.</p>
 </aside>
 </section>
@@ -157,6 +166,7 @@ Shhh, these are your private notes 📝
 <p><img src="assets/images/stadtpuls.com-tech-stack-cheat.png"></p>
 <aside class="notes">
 <p>Speaker: Fabian</p>
+<p>Bevor wir in unsere Topics abtauchen wollten wir kurz einen Übrblick geben was der Stack von Stadtpuls ist.</p>
 <p>Von Links</p>
 <p>Frameworks:</p>
 <ul>
@@ -164,29 +174,46 @@ Shhh, these are your private notes 📝
 <li>Fastify.js Backend (Node.js) deployed auf render.com</li>
 <li>Beide sprechen mit Supabase</li>
 </ul>
-<p>BTW (ich habe ein wenig gecheated)</p>
 </aside>
 </section>
 <section class="slide level2">
 
 <p><img src="assets/images/stadtpuls.com-tech-stack-real.png"></p>
+<aside class="notes">
+<p>Speaker: Fabian</p>
+<p>BTW (ich habe ein wenig gecheated im chart)</p>
+<ul>
+<li>Wir haben noch GitHub als VCS &amp; CI/CD mit drin</li>
+<li>und Mapbox als Kartenprovider</li>
+</ul>
+<p>An Lucas:</p>
+</aside>
 </section></section>
 <section>
 <section id="konvention-vor-konfiguration" class="title-slide slide level1">
 <h1>Konvention vor Konfiguration</h1>
 <aside class="notes">
 <p>Speaker: Lucas</p>
+<ul>
+<li>Keine Custom Frameworks (Don’t reinvent the wheel)</li>
+<li>Keine Homebrew UI Libraries (Aber eigener UI Komponente)</li>
+<li>Generalisierte und weit verbreitete Tools</li>
+</ul>
+<p>erlauben schnellere Adaption und Onboarding</p>
 </aside>
 </section>
-<section id="große-community" class="slide level2">
-<h2>Große Community</h2>
+<section id="große-communities" class="slide level2">
+<h2>Große Communities</h2>
+<p><img data-src="assets/images/communities.png" /></p>
 <aside class="notes">
 <p>Speaker: Lucas</p>
-<p>React, Fastify, Postgres, etc Discord gruppen, Github Discussions, Gists, Stackoverflow, etc.</p>
+<p>Etablierte und weit verbreitete tools: - React, Fastify, Postgres, etc</p>
+<p>Große Community und Orte, um Antworten zu finden: - Discord gruppen, Github Discussions, Gists, Stackoverflow, etc.</p>
 </aside>
 </section>
 <section id="viele-resourcen" class="slide level2">
 <h2>Viele Resourcen</h2>
+<p><img data-src="assets/images/resources.png" /></p>
 <aside class="notes">
 <p>Speaker: Lucas</p>
 <p>Artikeln, Newsletters, Coder websites, … Tutorials: Youtube, Egghead, codecademy, …</p>
@@ -197,8 +224,9 @@ Shhh, these are your private notes 📝
 <p><img style="width:50%" src="assets/images/supabase-logo-wordmark--light.png"></p>
 <aside class="notes">
 <p>Speaker: Fabian</p>
-<p>Was ist so cool an Open Source Software und Open Core Produkten?</p>
-<p>Am Beispiel Supabase</p>
+<p>Klar wir nehmen Open source wo wir können.</p>
+<p>Aber warum? Weil es kostenlos ist? (Spoiler Nein) Was ist so cool an Open Source Software und Open Core Produkten?</p>
+<p>Schaune wir uns das mal an am Beispiel Supabase:</p>
 </aside>
 </section>
 <section id="backend-as-a-service-startup" class="slide level2">
@@ -208,7 +236,7 @@ Shhh, these are your private notes 📝
 </blockquote>
 <aside class="notes">
 <p>Selber sagen sie von sich sie seien eine OS Firebase alternative.</p>
-<p>Supabase ist ein Open Source Open Core Startup aus USA CA welches komplett remote arbeitet. Die Supabase ist noch in public Beta das bereits $30 Millionen Series A Funding erhalten hat</p>
+<p>Supabase ist ein Open Source Open Core Startup aus USA CA welches komplett remote arbeitet. Die Supabase ist noch in Public Beta haben aber bereits $30 Millionen Series A Funding erhalten hat</p>
 </aside>
 </section>
 <section class="slide level2">
@@ -246,19 +274,22 @@ Shhh, these are your private notes 📝
 <aside class="notes">
 <p>Speaker: Lucas</p>
 <ul>
-<li>Typescript</li>
-<li>Storybook</li>
+<li>Warum ist Dokumentation wichtig?</li>
+<li>Wie erstellen wir Dokumentation?</li>
 </ul>
-<p>Speaker: Fabian</p>
+<p>Schriftliche Dokumentation ist oft eine Bürde für Entwickler.</p>
 <ul>
-<li>Fastify JSON Schemas</li>
+<li>Sie wird im Nachhinein geschrieben (oder auch nicht)</li>
+<li>Sie wird vorab geschrieben (und stimmt dann nicht mehr mit der App überein)</li>
 </ul>
+<p>Andere Ansätze sind zB auch README Driven Development</p>
 </aside>
 </section>
 <section id="typescript" class="slide level2">
 <h2>Typescript</h2>
 <aside class="notes">
 <p>Speaker: Lucas</p>
+<p>Static Typechecking erlaubt:</p>
 <ul>
 <li>Dokumentiert Funktionen &amp; Variabeln</li>
 <li>Warnt vor mögliche Fehlern</li>
@@ -274,37 +305,73 @@ Shhh, these are your private notes 📝
 <p>Unser Backend Framework “Fastify” ist nicht nur schnell, wie der Name impliziert, sondern bietet auch eine ein gute DX.</p>
 <p>Durch JSON Schemas können HTTP Anfragen validiert werden. Vorteile sind:</p>
 <ul>
-<li>Keine Fleissarbeit im validieren von Request Bodies, Headern, Parametern oder Querystrings</li>
-<li>Keine Fleissarbeit im schreiben von Error Handlern</li>
-<li>Dokumentation der Möglichkeiten einer Route in Code</li>
+<li>Keine Fleissarbeit im Validieren von Request Bodies, Headern, Parametern oder Querystrings</li>
+<li>Keine Fleissarbeit im Schreiben von Error Handlern und Error Responses</li>
+<li>Dokumentation der Möglichkeiten/Anforderungen eines Endpoints in Code</li>
 </ul>
 </aside>
 </section>
-<section id="bsp.-json-schema" class="slide level2">
-<h2>Bsp.: JSON Schema</h2>
+<section id="json-schema" class="slide level2">
+<h2>JSON Schema</h2>
+<p>POST http://example.com/api/cats</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;$id&quot;</span><span class="fu">:</span> <span class="st">&quot;https://example.com/cat.schema.json&quot;</span><span class="fu">,</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;$id&quot;</span><span class="fu">:</span> <span class="st">&quot;https://example.com/api/cats.schema.json&quot;</span><span class="fu">,</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;title&quot;</span><span class="fu">:</span> <span class="st">&quot;cat&quot;</span><span class="fu">,</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;object&quot;</span><span class="fu">,</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;properties&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;description&quot;</span><span class="fu">:</span> <span class="st">&quot;The cat&#39;s name.&quot;</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">},</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;mood&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;description&quot;</span><span class="fu">:</span> <span class="st">&quot;The mood the cat is in.&quot;</span><span class="fu">,</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;enum&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;grumpy&quot;</span><span class="ot">,</span> <span class="st">&quot;happy&quot;</span><span class="ot">,</span> <span class="st">&quot;purrrr!&quot;</span><span class="ot">]</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;required&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;mood&quot;</span><span class="ot">]</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;additionalProperties&quot;</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;properties&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;description&quot;</span><span class="fu">:</span> <span class="st">&quot;The cat&#39;s name.&quot;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">},</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;mood&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;description&quot;</span><span class="fu">:</span> <span class="st">&quot;The mood the cat is in.&quot;</span><span class="fu">,</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;enum&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;grumpy&quot;</span><span class="ot">,</span> <span class="st">&quot;happy&quot;</span><span class="ot">,</span> <span class="st">&quot;purrrr!&quot;</span><span class="ot">]</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;required&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;mood&quot;</span><span class="ot">]</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<aside class="notes">
+<p>Speaker: Fabian</p>
+<p>Hier ein Beispiel Schema für meine fiktive Katzen API</p>
+<p>Dieses JSON beschreibt:</p>
+<ul>
+<li>Welche Eigenschaften erlaubt sind</li>
+<li>Welche Eigenschaften vorgeschrieben sind</li>
+<li>Welche Möglichkeiten für zB mood zur Verfügung stehen</li>
+<li>Das keine zusätzlichen Eigenschaften erlaubt sind</li>
+</ul>
+</aside>
 </section>
-<section id="bsp.-json" class="slide level2">
-<h2>Bsp.: JSON</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;Mister Fuzzyboots&quot;</span><span class="fu">,</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;mood&quot;</span><span class="fu">:</span> <span class="st">&quot;purrrr!&quot;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<section id="request-201" class="slide level2">
+<h2>Request 201</h2>
+<pre class="http"><code>POST /api/cats HTTP/1.1
+Host: example.com
+Content-Type: application/json
+
+{&quot;mood&quot;: &quot;purrrr!&quot;}</code></pre>
+<aside class="notes">
+<p>Speaker: Fabian</p>
+<p>Dies wäre ein POST Request der diesem Schema entspricht. Somit bekommen wir ein 201 zurück und alles ist gut.</p>
+</aside>
+</section>
+<section id="request-400" class="slide level2">
+<h2>Request 400</h2>
+<pre class="http"><code>POST /api/cats HTTP/1.1
+Host: example.com
+Content-Type: application/json
+
+{&quot;mood&quot;: &quot;purrrr!&quot;, &quot;saz&quot;: &quot;I hate Mondays!&quot;}
+</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;statusCode&quot;</span><span class="fu">:</span> <span class="dv">400</span><span class="fu">,</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;error&quot;</span><span class="fu">:</span> <span class="st">&quot;Bad Request&quot;</span><span class="fu">,</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;message&quot;</span><span class="fu">:</span> <span class="st">&quot;body should NOT have additional properties&quot;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<aside class="notes">
+<p>Speaker: Fabian</p>
+<p>Wenn das Schema auf eine Route angwandt ist würde uns Fastify eine 400 Response senden. All das passiert, ohne dass ich eine spezielle Funktion schreibe die den Body validiert.</p>
+</aside>
 </section>
 <section id="storybook" class="slide level2">
 <h2>Storybook</h2>
@@ -366,15 +433,23 @@ Shhh, these are your private notes 📝
 <li>eine gemeinsame Code-Qualität zu erhalten und aber auch</li>
 <li>Fehler zu sehen die CI/CD oder Testing nicht sehen.</li>
 </ul>
-<p>Ein weiterer Effekt ist, dass das Teammitglider so auch Einblick in Bereiche der Applikation erhält an denen sie selber gar nicht arbeiten.</p>
+<p>Ein weiterer Effekt ist, dass das Teammitglider so auch Einblick in Bereiche der Applikation erhält an denen sie selber gar nicht arbeiten und damit der BUS Faktor reduziert wird.</p>
 </aside>
 </section>
 <section id="github-actions" class="slide level2">
 <h2>Github Actions</h2>
-<p>Bei jeder PR/Push</p>
+<ul>
+<li>CI (Continuous Integration)</li>
+<li>CD (Continuous Delivery)</li>
+<li>CD (Continuous Deployment)</li>
+</ul>
 <aside class="notes">
 <p>Speaker: Fabian</p>
-<p>Zu den Codereviews lassen wir bei jedem Pull Request und auch Push zu einem Branch alle Tests auf dem CI/CD System laufen. Wenn ein Test Fehler wirft wird auch nicht gemerged.</p>
+<ul>
+<li>CI COn Integration. Zu den Codereviews lassen wir bei jedem Pull Request und auch Push zu einem Branch alle Tests + builds via GitHub Actions laufen. Wenn ein Test Fehler wirft wird auch nicht gemerged.</li>
+<li>CD Continuous Delivery. Wennn alles geht und der Codereviews auch passt kann in staging gemerged werden</li>
+<li>CD Continuous Deployment. Sobald auf staging alles gut aussieht kann in main gemerged werden und die Applikationen wird automatisch zu render.com oder vercel.com deployed und ist live</li>
+</ul>
 <p>Kein: Works on my Machine!</p>
 </aside>
 </section>
