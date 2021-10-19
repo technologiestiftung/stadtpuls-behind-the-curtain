@@ -1,7 +1,10 @@
 <img src="./assets/images/logo-sprite.svg" width="500px">
 
 <aside class="notes">
-Shhh, these are your private notes 📝
+
+Speaker: Fabian
+
+Stadtpuls, Stadtpuls, Stadtpuls und Stadtpuls
 </aside>
 
 ---
@@ -20,26 +23,37 @@ Jack of all Trades Master of None.
 Ganz offiziel bin ich Kommunikations Designer & Kaufmann, bin aber im Laufe meine
 Karriere immer weiter in die Bereiche Dev Ops und Full Stack eingetaucht.
 
+An -> Lucas
+
 </aside>
 
 ## Lucas Vogel
 
-* TODO
+* UI/UX Designer & Frontend Developer
+* @CityLAB Berlin
+* @Technologiestiftung Berlin
+* GitHub: @vogelino
 
 <aside class="notes">
 
+* Aus der Schweiz & Chile
+* In Berlin seit 10 Jahre
+* Im CityLAB seit Februar
 
+An -> Fabian
 </aside>
 
 # T.O.C.
 
-* Tech Stack Übersicht
+* Stadtpuls Tech Stack
 * Konvention vor Konfiguration
 * Dokumentation
 * Qualitätssicherung
 
 
 <aside class="notes">
+
+Speaker: Fabian
 
 Wenn wir zu schnell sind sagt uns Bescheid oder wenn wir etwas anders erklären soll.
 Eine Diskussion können wir gerne im QA führen.
@@ -52,13 +66,11 @@ Eine Diskussion können wir gerne im QA führen.
 
 <aside class="notes">
 
-Speaker: Fabian
-
 Die Präsentation findet ihr auch online hinter diesem Link.
 
 </aside>
 
-# Tech Stack Übersicht
+# Stadtpuls Tech Stack
 
 ---
 
@@ -66,7 +78,8 @@ Die Präsentation findet ihr auch online hinter diesem Link.
 
 <aside class="notes">
 
-Speaker: Fabian
+Bevor wir in unsere Topics abtauchen wollten wir kurz einen Übrblick geben
+welche Technologien hinter Stadtpuls stehen.
 
 Von Links
 
@@ -76,14 +89,24 @@ Frameworks:
 * Fastify.js Backend (Node.js) deployed auf render.com
 * Beide sprechen mit Supabase
 
-BTW (ich habe ein wenig gecheated)
-
 </aside>
-
 
 ---
 
 <img src="assets/images/stadtpuls.com-tech-stack-real.png">
+
+<aside class="notes">
+
+BTW (ich habe ein wenig gecheated im Chart)
+
+* Wir haben noch GitHub als VCS & CI/CD mit drin
+* und Mapbox als Kartenprovider
+  
+Ohne sieht es aber schicker aus ;)
+
+An -> Lucas
+
+</aside>
 
 # Konvention vor Konfiguration
 
@@ -91,28 +114,38 @@ BTW (ich habe ein wenig gecheated)
 
 Speaker: Lucas
 
+* Keine Custom Frameworks (Don't reinvent the wheel)
+* Keine Homebrew UI Libraries (Aber eigene UI Komponenten)
+* Generalisierte und weit verbreitete Tools
+
+erlauben schnellere Adaption und Onboarding
+
 </aside>
 
-## Große Community
+## Große Communities
 
+![](assets/images/communities.png)
 
 <aside class="notes">
 
-Speaker: Lucas
+Etablierte und weit verbreitete tools:
+- React, Fastify, Postgres, etc
 
-React, Fastify, Postgres, etc
-Discord gruppen, Github Discussions, Gists, Stackoverflow, etc.
+Große Community und Orte, um Antworten zu finden:
+- Discord gruppen, Github Discussions, Gists, Stackoverflow, etc.
 
 </aside>
 
 ## Viele Resourcen
 
-<aside class="notes">
+![](assets/images/resources.png)
 
-Speaker: Lucas
+<aside class="notes">
 
 Artikeln, Newsletters, Coder websites, ...
 Tutorials: Youtube, Egghead, codecademy, ...
+
+An -> Fabian
 
 </aside>
 
@@ -124,9 +157,13 @@ Tutorials: Youtube, Egghead, codecademy, ...
 
 Speaker: Fabian
 
+Klar wir nehmen Open source wo wir können.
+
+Aber warum?
+Weil es kostenlos ist? (Spoiler Nein)
 Was ist so cool an Open Source Software und Open Core Produkten?
 
-Am Beispiel Supabase
+Schaune wir uns das mal an am Beispiel Supabase:
 
 </aside>
 
@@ -141,7 +178,7 @@ Am Beispiel Supabase
 Selber sagen sie von sich sie seien eine OS Firebase alternative.
 
 Supabase ist ein Open Source Open Core Startup aus USA CA welches komplett remote arbeitet.
-Die Supabase ist noch in public Beta das bereits $30 Millionen Series A Funding erhalten hat
+Die Supabase ist noch in Public Beta haben aber bereits $30 Millionen Series A Funding erhalten hat
 
 </aside>
 
@@ -152,10 +189,6 @@ Die Supabase ist noch in public Beta das bereits $30 Millionen Series A Funding 
 
 
 <aside class="notes">
-
-Speaker: Fabian 
-
-
 
 * Kong (API Gateway)
 * GoTrue (Auth System by Netlify)
@@ -174,6 +207,8 @@ Speaker: Fabian
 * Selbst wenn Google morgen alles kauft
   und abschaltet kann ich den Tech Stack weiter verwenden
 
+An -> Lucas
+
 </aside>
 
 # Dokumentation
@@ -183,25 +218,78 @@ Speaker: Fabian
 
 Speaker: Lucas
 
-* Typescript
-* Storybook
+* Warum ist Dokumentation wichtig?
+* Wie erstellen wir Dokumentation?
 
-Speaker: Fabian
+Schriftliche Dokumentation ist oft eine Bürde für Entwickler.
 
-* Fastify JSON Schemas
+* Sie wird im Nachhinein geschrieben (oder auch nicht)
+* Sie wird vorab geschrieben (und stimmt dann nicht mehr mit der App überein)
 
+Andere Ansätze sind zB auch README Driven Development
 
 </aside>
 
-## Typescript
+## JavaScript...
+
+```js
+export const SigninButton= (props) => {
+  return <><button onClick={
+    (e) => {
+    e.preventDefault();
+    console.log(props.email, props.password);
+  }}/></>
+}
+
+
+
+
+
+
+
+```
+<!-- SPACE OBEN LASSEN - Sorgt dafür, dass die slides nicht so springen -->
 
 <aside class="notes">
 
 Speaker: Lucas
 
+Javascript dokumentiert nicht der code: 
+
+* Woher weiss ich welche Typen meine props bekommen sollten?
+
+</aside>
+
+## ...Versus Typescript
+
+```jsx
+interface SigninProps {
+  email: string;
+  password: string;
+}
+export const SigninButton: React.FC<SigninProps> = ({
+  email, password
+}) => {
+  return <><button onClick={
+    (e: React.ChangeEvent<any>) => {
+    e.preventDefault();
+    console.log(email, password);
+  }}/></>
+}
+```
+
+<aside class="notes">
+
+
+Speaker: Lucas
+
+Static Typechecking erlaubt: 
+
 * Dokumentiert Funktionen & Variabeln
 * Warnt vor mögliche Fehlern
 * Bietet Autovervollständigung
+
+An -> Fabian
 
 </aside>
 
@@ -219,19 +307,22 @@ sondern bietet auch eine ein gute DX.
 Durch JSON Schemas können HTTP Anfragen validiert werden.
 Vorteile sind:
 
-- Keine Fleissarbeit im validieren von Request Bodies, Headern, Parametern oder Querystrings
-- Keine Fleissarbeit im schreiben von Error Handlern
-- Dokumentation der Möglichkeiten einer Route in Code
+* Keine Fleissarbeit im Validieren von Request Bodies, Headern, Parametern oder Querystrings
+* Keine Fleissarbeit im Schreiben von Error Handlern und Error Responses
+* Dokumentation der Möglichkeiten/Anforderungen eines Endpoints in Code
 
 </aside>
 
-## Bsp.: JSON Schema
+## JSON Schema
+
+POST http://example.com/api/cats
 
 ```json
 {
-  "$id": "https://example.com/cat.schema.json",
-  "title": "cat",
+  "$id": "https://example.com/api/cats.schema.json",
+  "title": "cats",
   "type": "object",
+  "additionalProperties": false,
   "properties": {
     "name": {
       "type": "string",
@@ -246,16 +337,68 @@ Vorteile sind:
 }
 ```
 
-## Bsp.: JSON
+<aside class="notes">
+
+Hier ein Beispiel Schema für meine fiktive Katzen API
+
+Dieses JSON beschreibt:
+
+* Welche Eigenschaften erlaubt sind
+* Welche Eigenschaften vorgeschrieben sind
+* Welche Möglichkeiten für zB mood zur Verfügung stehen
+* Das keine zusätzlichen Eigenschaften erlaubt sind
+
+</aside>
+
+## Request 201
+
+```http
+POST /api/cats HTTP/1.1
+Host: example.com
+Content-Type: application/json
+
+{"mood": "purrrr!"}
+```
+
+<aside class="notes">
+
+Dies wäre ein POST Request der diesem Schema entspricht.
+Somit bekommen wir ein 201 zurück und alles ist gut.
+
+</aside>
+
+
+## Request 400
+
+```http
+POST /api/cats HTTP/1.1
+Host: example.com
+Content-Type: application/json
+
+{"mood": "purrrr!", "saz": "I hate Mondays!"}
+
+```
 
 ```json
 {
-  "name": "Mister Fuzzyboots",
-  "mood": "purrrr!"
+  "statusCode": 400,
+  "error": "Bad Request",
+  "message": "body should NOT have additional properties"
 }
 ```
+<aside class="notes">
+
+Wenn das Schema auf eine Route angwandt ist würde uns Fastify eine 400 Response senden.
+All das passiert, ohne dass ich eine spezielle Funktion schreibe die den Body validiert.
+
+An -> Lucas
+
+</aside>
+
 
 ## Storybook
+
+![](assets/images/storybook.png)
 
 <aside class="notes">
 
@@ -300,6 +443,8 @@ Speaker: Lucas
 * Lässt in isolation testen und entwickeln
 * Kann für snapshot testing verwendet werden
 
+An -> Fabian
+
 </aside>
 
 ## Code Reviews
@@ -323,20 +468,29 @@ Es geht vornehmlich darum
 * Fehler zu sehen die CI/CD oder Testing nicht sehen.
 
 Ein weiterer Effekt ist, dass das Teammitglider so auch Einblick in Bereiche der Applikation erhält
-an denen sie selber gar nicht arbeiten.
+an denen sie selber gar nicht arbeiten und damit der BUS Faktor reduziert wird.
+
+
 
 </aside>
 
 ## Github Actions
 
-Bei jeder PR/Push
+* CI (Continuous Integration)
+* CD (Continuous Delivery)
+* CD (Continuous Deployment)
+
+---
+
+<img src="assets/images/cicd.png">
 
 <aside class="notes">
 
-Speaker: Fabian
-
-Zu den Codereviews lassen wir bei jedem Pull Request und auch Push zu einem Branch
-alle Tests auf dem CI/CD System laufen. Wenn ein Test Fehler wirft wird auch nicht gemerged.
+* CI  Continuous Integration. Zu den Codereviews lassen wir bei jedem Pull Request und auch Push zu einem Branch
+alle Tests + builds via GitHub Actions laufen. Wenn ein Test Fehler wirft wird auch nicht gemerged.
+* CD Continuous Delivery. Wennn alles geht und der Codereviews auch passt kann in staging gemerged werden
+* CD Continuous Deployment. Sobald auf staging alles gut aussieht kann in main gemerged werden und
+  die Applikationen wird automatisch zu render.com oder vercel.com deployed und ist live in production
 
 Kein: Works on my Machine!
 
@@ -346,19 +500,14 @@ Kein: Works on my Machine!
 
 <aside class="notes">
 
-Speaker: Fabian
-
 Des weiteren haben wir die gesamte Applikation dupliziert und können alle neuen Features
-online testen.
+online testen bevor wir sie in Production senden.
 
 Kein "Testing in Production"
 
 </aside>
 
 # Q & A
-
-
-
 # Danke
 
 für Ihre Aufmerksamkeit
