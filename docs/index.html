@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="Fabian Morón Zirfas">
+  <meta name="author" content="Lucas Vogel &amp; Fabian Morón Zirfas">
   <meta name="dcterms.date" content="2021-10-20">
   <title>[api.]stadtpuls.com</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,6 +20,51 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { font-weight: bold; } /* Alert */
+    code span.an { font-style: italic; } /* Annotation */
+    code span.cf { font-weight: bold; } /* ControlFlow */
+    code span.co { font-style: italic; } /* Comment */
+    code span.cv { font-style: italic; } /* CommentVar */
+    code span.do { font-style: italic; } /* Documentation */
+    code span.dt { text-decoration: underline; } /* DataType */
+    code span.er { font-weight: bold; } /* Error */
+    code span.in { font-style: italic; } /* Information */
+    code span.kw { font-weight: bold; } /* Keyword */
+    code span.pp { font-weight: bold; } /* Preprocessor */
+    code span.wa { font-style: italic; } /* Warning */
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/simple.css" id="theme">
@@ -49,7 +94,7 @@
 <section id="title-slide">
   <h1 class="title" id="meta-title">[api.]stadtpuls.com</h1>
   <p class="subtitle">/behind/the/curtain</p>
-  <p class="author">Fabian Morón Zirfas</p>
+  <p class="author">Lucas Vogel &amp; Fabian Morón Zirfas</p>
   <p class="date">2021-10-20</p>
 </section>
 
@@ -73,62 +118,96 @@ Shhh, these are your private notes 📝
 <p>Ganz offiziel bin ich Kommunikations Designer &amp; Kaufmann, bin aber im Laufe meine Karriere immer weiter in die Bereiche Dev Ops und Full Stack eingetaucht.</p>
 </aside>
 </section>
+<section id="lucas-vogel" class="slide level2">
+<h2>Lucas Vogel</h2>
+<ul>
+<li>TODO</li>
+</ul>
+<aside class="notes">
+</aside>
+</section>
 <section>
 <section id="t.o.c." class="title-slide slide level1">
 <h1>T.O.C.</h1>
 <ul>
-<li>Der Stadtpuls Tech Stack!</li>
-<li>WzT Supabase?</li>
-<li>Warum Supabase?</li>
-<li>Q &amp; A</li>
+<li>Tech Stack Übersicht</li>
+<li>Konvention vor Konfiguration</li>
+<li>Dokumentation</li>
+<li>Qualitätssicherung</li>
 </ul>
 <aside class="notes">
-<p>Wenn ich zu schnell bin sagen sie mir Bescheid oder wenn ich etwas anders erklären soll. Eine Diskussion können wir gerne im QA führen. Die Präsentation finden Sie auch online hinter diesem Link.</p>
+<p>Wenn wir zu schnell sind sagt uns Bescheid oder wenn wir etwas anders erklären soll. Eine Diskussion können wir gerne im QA führen.</p>
 </aside>
 </section>
-<section id="der-stadtpuls-tech-stack" class="slide level2">
-<h2>Der Stadtpuls Tech Stack</h2>
+<section id="online-präsentation" class="slide level2">
+<h2>Online Präsentation</h2>
+<p><a href="https://technologiestiftung.github.io/stadtpuls-behind-the-curtain">technologiestiftung.github.io/stadtpuls-behind-the-curtain</a></p>
+<aside class="notes">
+<p>Speaker: Fabian</p>
+<p>Die Präsentation findet ihr auch online hinter diesem Link.</p>
+</aside>
+</section></section>
+<section>
+<section id="tech-stack-übersicht" class="title-slide slide level1">
+<h1>Tech Stack Übersicht</h1>
+
 </section>
 <section class="slide level2">
 
-<p><img style="position:absolute;left:0;top:0;width:1920px;height:1080px" src="assets/images/stadtpuls.com-tech-stack-cheat.png"></p>
+<p><img src="assets/images/stadtpuls.com-tech-stack-cheat.png"></p>
 <aside class="notes">
+<p>Speaker: Fabian</p>
 <p>Von Links</p>
 <p>Frameworks:</p>
 <ul>
-<li>Next.js Frontend (React) deployed auf vercel.com</li>
+<li>Next.js Frontend (React.js) deployed auf vercel.com</li>
 <li>Fastify.js Backend (Node.js) deployed auf render.com</li>
 <li>Beide sprechen mit Supabase</li>
 </ul>
-BTW (ich habe ein wenig gecheated)
+<p>BTW (ich habe ein wenig gecheated)</p>
 </aside>
 </section>
 <section class="slide level2">
 
-<p><img style="position:absolute;left:0;top:0;width:1920px;height:1080px" src="assets/images/stadtpuls.com-tech-stack-real.png"></p>
-</section>
-<section id="was-zum-teufel-wzt-ist" class="slide level2">
-<h2>Was zum Teufel (WzT) ist</h2>
-<p><img style="width:80%" src="assets/images/supabase-logo-wordmark--light.png"></p>
+<p><img src="assets/images/stadtpuls.com-tech-stack-real.png"></p>
+</section></section>
+<section>
+<section id="konvention-vor-konfiguration" class="title-slide slide level1">
+<h1>Konvention vor Konfiguration</h1>
 <aside class="notes">
-Da stellt sich die Frage WzT
+<p>Speaker: Lucas</p>
 </aside>
 </section>
-<section class="slide level2">
-
+<section id="große-community" class="slide level2">
+<h2>Große Community</h2>
+<aside class="notes">
+<p>Speaker: Lucas</p>
+<p>React, Fastify, Postgres, etc Discord gruppen, Github Discussions, Gists, Stackoverflow, etc.</p>
+</aside>
+</section>
+<section id="viele-resourcen" class="slide level2">
+<h2>Viele Resourcen</h2>
+<aside class="notes">
+<p>Speaker: Lucas</p>
+<p>Artikeln, Newsletters, Coder websites, … Tutorials: Youtube, Egghead, codecademy, …</p>
+</aside>
+</section>
+<section id="open-sourcecore" class="slide level2">
+<h2>Open Source/Core</h2>
+<p><img style="width:50%" src="assets/images/supabase-logo-wordmark--light.png"></p>
+<aside class="notes">
+<p>Speaker: Fabian</p>
+<p>Was ist so cool an Open Source Software und Open Core Produkten?</p>
+<p>Am Beispiel Supabase</p>
+</aside>
+</section>
+<section id="backend-as-a-service-startup" class="slide level2">
+<h2>Backend as a Service Startup</h2>
 <blockquote>
 <p>Supabase is an open source Firebase alternative.</p>
 </blockquote>
 <aside class="notes">
-<p>Selber sagen sie, sie sind eine Firebase alternative.</p>
-</aside>
-</section>
-<section id="open-sourceopen-core" class="slide level2">
-<h2>Open Source/Open Core</h2>
-<h3 id="b.a.a.s.-startup">B.a.a.S.* Startup</h3>
-<p><br> <br> <br></p>
-<p>* Backend as a Service</p>
-<aside class="notes">
+<p>Selber sagen sie von sich sie seien eine OS Firebase alternative.</p>
 <p>Supabase ist ein Open Source Open Core Startup aus USA CA welches komplett remote arbeitet. Die Supabase ist noch in public Beta das bereits $30 Millionen Series A Funding erhalten hat</p>
 </aside>
 </section>
@@ -136,38 +215,175 @@ Da stellt sich die Frage WzT
 
 <p><img data-src="assets/images/supabase-tech.png" /></p>
 <aside class="notes">
+<p>Speaker: Fabian</p>
 <ul>
-<li>Kong (API Gateway)</li>
-<li>GoTrue (Auth System by Netlify)</li>
-<li>Realtime (Elixir mit Phoenix Framework)</li>
-<li>PostgREST (Automitische REST API for postgres DB)</li>
-<li>pg-meta (Custom Postgres DBs Management API)</li>
-<li>Postgres (DB mit nem Haufen Extensions)</li>
-</ul>
-</aside>
-</section>
-<section id="batteries-included" class="slide level2">
-<h2>Batteries Included</h2>
-<aside class="notes">
-<p>Supabase kommt</p>
+<li><p>Kong (API Gateway)</p></li>
+<li><p>GoTrue (Auth System by Netlify)</p>
 <ul>
-<li>mit einer API für die DB (ohne eine Zeile Code)</li>
-<li>mit SDKs für JS (offiziel) + C#, Python, Rust, Kotlin, Dart community</li>
 <li>mit Authentication System (Bist du du?)</li>
-<li>mit Authorization via Postgres RLS (Darfst du das?)</li>
-<li>mit Storage (AWS S3?)</li>
+</ul></li>
+<li><p>PostgREST (REST API for postgres DB ohne eine Zeile Code)</p></li>
+<li><p>Realtime (Elixir mit Phoenix Framework)</p>
+<ul>
 <li>mit Realtime Pub/Sub (Postgres Changes -&gt; Websocket)</li>
-<li>bald mit serverless functions</li>
+</ul></li>
+<li><p>mit Storage (AWS S3?)</p></li>
+<li><p>pg-meta (Custom Postgres DBs Management API)</p></li>
+<li><p>Postgres (DB mit nem Haufen Extensions)</p>
+<ul>
+<li>mit Authorization via Postgres RLS (Darfst du das?)</li>
+</ul></li>
+<li><p>mit SDKs für JS (offiziel) + C#, Python, Rust, Kotlin, Dart community</p></li>
+<li><p>bald mit serverless functions</p></li>
+<li><p>Alles was das Core Produkt ausmacht ist OSS</p></li>
+<li><p>Selbst wenn Google morgen alles kauft und abschaltet kann ich den Tech Stack weiter verwenden</p></li>
+</ul>
+</aside>
+</section></section>
+<section>
+<section id="dokumentation" class="title-slide slide level1">
+<h1>Dokumentation</h1>
+<aside class="notes">
+<p>Speaker: Lucas</p>
+<ul>
+<li>Typescript</li>
+<li>Storybook</li>
+</ul>
+<p>Speaker: Fabian</p>
+<ul>
+<li>Fastify JSON Schemas</li>
 </ul>
 </aside>
 </section>
-<section id="warum-supabase" class="slide level2">
-<h2>Warum Supabase?</h2>
+<section id="typescript" class="slide level2">
+<h2>Typescript</h2>
 <aside class="notes">
+<p>Speaker: Lucas</p>
 <ul>
-<li>Alles was das Core Produkt ausmacht ist OSS</li>
-<li>Selbst wenn Google morgen alles kauft und abschaltet kann ich den Tech Stack weiter verwenden</li>
+<li>Dokumentiert Funktionen &amp; Variabeln</li>
+<li>Warnt vor mögliche Fehlern</li>
+<li>Bietet Autovervollständigung</li>
 </ul>
+</aside>
+</section>
+<section id="fastify-json-schemas" class="slide level2">
+<h2>Fastify JSON Schemas</h2>
+<p><img data-src="assets/images/json-schema.png" /></p>
+<aside class="notes">
+<p>Speaker: Fabian</p>
+<p>Unser Backend Framework “Fastify” ist nicht nur schnell, wie der Name impliziert, sondern bietet auch eine ein gute DX.</p>
+<p>Durch JSON Schemas können HTTP Anfragen validiert werden. Vorteile sind:</p>
+<ul>
+<li>Keine Fleissarbeit im validieren von Request Bodies, Headern, Parametern oder Querystrings</li>
+<li>Keine Fleissarbeit im schreiben von Error Handlern</li>
+<li>Dokumentation der Möglichkeiten einer Route in Code</li>
+</ul>
+</aside>
+</section>
+<section id="bsp.-json-schema" class="slide level2">
+<h2>Bsp.: JSON Schema</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;$id&quot;</span><span class="fu">:</span> <span class="st">&quot;https://example.com/cat.schema.json&quot;</span><span class="fu">,</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;title&quot;</span><span class="fu">:</span> <span class="st">&quot;cat&quot;</span><span class="fu">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;object&quot;</span><span class="fu">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;properties&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;description&quot;</span><span class="fu">:</span> <span class="st">&quot;The cat&#39;s name.&quot;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">},</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;mood&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;description&quot;</span><span class="fu">:</span> <span class="st">&quot;The mood the cat is in.&quot;</span><span class="fu">,</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;enum&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;grumpy&quot;</span><span class="ot">,</span> <span class="st">&quot;happy&quot;</span><span class="ot">,</span> <span class="st">&quot;purrrr!&quot;</span><span class="ot">]</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;required&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;mood&quot;</span><span class="ot">]</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+</section>
+<section id="bsp.-json" class="slide level2">
+<h2>Bsp.: JSON</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;Mister Fuzzyboots&quot;</span><span class="fu">,</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;mood&quot;</span><span class="fu">:</span> <span class="st">&quot;purrrr!&quot;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+</section>
+<section id="storybook" class="slide level2">
+<h2>Storybook</h2>
+<aside class="notes">
+<p>Speaker: Lucas</p>
+<ul>
+<li>Gibt ein Überblick über alle verfügbare Komponente</li>
+<li>Responsive Styles / Größe, etc.</li>
+<li>Parameters und Props</li>
+</ul>
+</aside>
+</section></section>
+<section>
+<section id="qualitätssicherung" class="title-slide slide level1">
+<h1>Qualitätssicherung</h1>
+<aside class="notes">
+<p>Speaker: Lucas</p>
+</aside>
+</section>
+<section id="testing" class="slide level2">
+<h2>Testing</h2>
+<ul>
+<li>Unit-testing</li>
+<li>Snapshot-testing</li>
+<li>Integration-testing</li>
+</ul>
+<aside class="notes">
+<p>Speaker: Lucas</p>
+<ul>
+<li>Unit-testing: Überprüft die interne logik (aka. Business logic)</li>
+<li>Snapshot-testing: Warnt vor unerwartete Änderungen</li>
+<li>Integration-testing: Repliziert Production Umstände und sichert zusammenhand</li>
+</ul>
+</aside>
+</section>
+<section id="storybook-1" class="slide level2">
+<h2>Storybook</h2>
+<aside class="notes">
+<p>Speaker: Lucas</p>
+<ul>
+<li>Lässt in isolation testen und entwickeln</li>
+<li>Kann für snapshot testing verwendet werden</li>
+</ul>
+</aside>
+</section>
+<section id="code-reviews" class="slide level2">
+<h2>Code Reviews</h2>
+<aside class="notes">
+<p>Speaker: Fabian</p>
+<p>Da wir als Team an der gleichen Codebase arbeiten ist es hilfreich auch das Team zu allen Änderungen am Code zu konsultieren.</p>
+<p>Sei es:</p>
+<ul>
+<li>Fixes</li>
+<li>Features</li>
+<li>Refactoring</li>
+</ul>
+<p>Es geht vornehmlich darum</p>
+<ul>
+<li>eine gemeinsame Code-Qualität zu erhalten und aber auch</li>
+<li>Fehler zu sehen die CI/CD oder Testing nicht sehen.</li>
+</ul>
+<p>Ein weiterer Effekt ist, dass das Teammitglider so auch Einblick in Bereiche der Applikation erhält an denen sie selber gar nicht arbeiten.</p>
+</aside>
+</section>
+<section id="github-actions" class="slide level2">
+<h2>Github Actions</h2>
+<p>Bei jeder PR/Push</p>
+<aside class="notes">
+<p>Speaker: Fabian</p>
+<p>Zu den Codereviews lassen wir bei jedem Pull Request und auch Push zu einem Branch alle Tests auf dem CI/CD System laufen. Wenn ein Test Fehler wirft wird auch nicht gemerged.</p>
+<p>Kein: Works on my Machine!</p>
+</aside>
+</section>
+<section id="staging-environments" class="slide level2">
+<h2>Staging Environments</h2>
+<aside class="notes">
+<p>Speaker: Fabian</p>
+<p>Des weiteren haben wir die gesamte Applikation dupliziert und können alle neuen Features online testen.</p>
+<p>Kein “Testing in Production”</p>
 </aside>
 </section></section>
 <section id="q-a" class="title-slide slide level1">
