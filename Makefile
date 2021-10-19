@@ -2,7 +2,7 @@
 build:
 	@pandoc \
 	--to=revealjs \
-	--highlight-style=zenburn \
+	--highlight-style=monochrome \
 	--template=src/default.revealjs \
 	--standalone \
 	--output=docs/index.html \

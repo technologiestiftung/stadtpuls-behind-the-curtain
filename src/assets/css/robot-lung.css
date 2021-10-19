@@ -429,3 +429,7 @@ li {
 h1.title#meta-title {
   text-transform: none;
 }
+
+code span.dt {
+  text-decoration: none;
+}
