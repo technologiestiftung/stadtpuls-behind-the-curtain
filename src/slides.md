@@ -490,9 +490,11 @@ Kein: Works on my Machine!
 
 ![](assets/images/environments.svg)
 
-<a href='https://www.freepik.com/vectors/music'>Music vector created by freepik, </a>
-<a href='https://www.freepik.com/vectors/process'>Process vector created by stories, </a>
-<a href='https://www.freepik.com/vectors/technology'>and Technology vector created by freepik - www.freepik.com</a>
+<small style="font-size:12px;">
+<a style="color:#B4B4C7;" href='https://www.freepik.com/vectors/music'>Music vector created by freepik, </a>
+<a style="color:#B4B4C7;" href='https://www.freepik.com/vectors/process'>Process vector created by stories, </a>
+<a style="color:#B4B4C7;" href='https://www.freepik.com/vectors/technology'>and Technology vector created by freepik - www.freepik.com</a>
+</small>
 
 <aside class="notes">
 
