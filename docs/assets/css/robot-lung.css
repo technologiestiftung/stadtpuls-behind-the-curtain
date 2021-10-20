@@ -430,6 +430,10 @@ h1.title#meta-title {
   text-transform: none;
 }
 
+p.author#author {
+  max-width: 60%;
+}
+
 code span.dt {
   text-decoration: none;
 }

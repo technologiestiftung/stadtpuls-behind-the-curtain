@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="Lucas Vogel &amp; Fabian Morón Zirfas">
+  <meta name="author" content="Julia Zimmermann, Ingo Hinterding, Dennis Ostendorf, Lucas Vogel &amp; Fabian Morón Zirfas">
   <meta name="dcterms.date" content="2021-10-20">
   <title>[api.]stadtpuls.com</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -46,25 +46,38 @@
         -khtml-user-select: none; -moz-user-select: none;
         -ms-user-select: none; user-select: none;
         padding: 0 4px; width: 4em;
+        color: #aaaaaa;
       }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
     div.sourceCode
       {   }
     @media screen {
     pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
     }
-    code span.al { font-weight: bold; } /* Alert */
-    code span.an { font-style: italic; } /* Annotation */
-    code span.cf { font-weight: bold; } /* ControlFlow */
-    code span.co { font-style: italic; } /* Comment */
-    code span.cv { font-style: italic; } /* CommentVar */
-    code span.do { font-style: italic; } /* Documentation */
-    code span.dt { text-decoration: underline; } /* DataType */
-    code span.er { font-weight: bold; } /* Error */
-    code span.in { font-style: italic; } /* Information */
-    code span.kw { font-weight: bold; } /* Keyword */
-    code span.pp { font-weight: bold; } /* Preprocessor */
-    code span.wa { font-style: italic; } /* Warning */
+    code span.al { color: #ff0000; } /* Alert */
+    code span.an { color: #008000; } /* Annotation */
+    code span.at { } /* Attribute */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #0000ff; } /* ControlFlow */
+    code span.ch { color: #008080; } /* Char */
+    code span.cn { } /* Constant */
+    code span.co { color: #008000; } /* Comment */
+    code span.cv { color: #008000; } /* CommentVar */
+    code span.do { color: #008000; } /* Documentation */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.im { } /* Import */
+    code span.in { color: #008000; } /* Information */
+    code span.kw { color: #0000ff; } /* Keyword */
+    code span.op { } /* Operator */
+    code span.ot { color: #ff4000; } /* Other */
+    code span.pp { color: #ff4000; } /* Preprocessor */
+    code span.sc { color: #008080; } /* SpecialChar */
+    code span.ss { color: #008080; } /* SpecialString */
+    code span.st { color: #008080; } /* String */
+    code span.va { } /* Variable */
+    code span.vs { color: #008080; } /* VerbatimString */
+    code span.wa { color: #008000; font-weight: bold; } /* Warning */
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/simple.css" id="theme">
@@ -94,7 +107,7 @@
 <section id="title-slide">
   <h1 class="title" id="meta-title">[api.]stadtpuls.com</h1>
   <p class="subtitle">/behind/the/curtain</p>
-  <p class="author">Lucas Vogel &amp; Fabian Morón Zirfas</p>
+  <p class="author" id="author">Julia Zimmermann, Ingo Hinterding, Dennis Ostendorf, Lucas Vogel &amp; Fabian Morón Zirfas</p>
   <p class="date">2021-10-20</p>
 </section>
 
@@ -102,7 +115,8 @@
 
 <p><img src="./assets/images/logo-sprite.svg" width="500px"></p>
 <aside class="notes">
-Shhh, these are your private notes 📝
+<p>Speaker: Fabian</p>
+Stadtpuls, Stadtpuls, Stadtpuls und Stadtpuls
 </aside>
 </section>
 <section id="fabian-morón-zirfas" class="slide level2">
@@ -116,26 +130,37 @@ Shhh, these are your private notes 📝
 <aside class="notes">
 <p>Jack of all Trades Master of None.</p>
 <p>Ganz offiziel bin ich Kommunikations Designer &amp; Kaufmann, bin aber im Laufe meine Karriere immer weiter in die Bereiche Dev Ops und Full Stack eingetaucht.</p>
+<p>An -&gt; Lucas</p>
 </aside>
 </section>
 <section id="lucas-vogel" class="slide level2">
 <h2>Lucas Vogel</h2>
 <ul>
-<li>TODO</li>
+<li>UI/UX Designer &amp; Frontend Developer</li>
+<li><span class="citation" data-cites="CityLAB">@CityLAB</span> Berlin</li>
+<li><span class="citation" data-cites="Technologiestiftung">@Technologiestiftung</span> Berlin</li>
+<li>GitHub: <span class="citation" data-cites="vogelino">@vogelino</span></li>
 </ul>
 <aside class="notes">
+<ul>
+<li>Aus der Schweiz &amp; Chile</li>
+<li>In Berlin seit 10 Jahre</li>
+<li>Im CityLAB seit Februar</li>
+</ul>
+An -&gt; Fabian
 </aside>
 </section>
 <section>
 <section id="t.o.c." class="title-slide slide level1">
 <h1>T.O.C.</h1>
 <ul>
-<li>Tech Stack Übersicht</li>
+<li>Stadtpuls Tech Stack</li>
 <li>Konvention vor Konfiguration</li>
 <li>Dokumentation</li>
 <li>Qualitätssicherung</li>
 </ul>
 <aside class="notes">
+<p>Speaker: Fabian</p>
 <p>Wenn wir zu schnell sind sagt uns Bescheid oder wenn wir etwas anders erklären soll. Eine Diskussion können wir gerne im QA führen.</p>
 </aside>
 </section>
@@ -143,20 +168,19 @@ Shhh, these are your private notes 📝
 <h2>Online Präsentation</h2>
 <p><a href="https://technologiestiftung.github.io/stadtpuls-behind-the-curtain">technologiestiftung.github.io/stadtpuls-behind-the-curtain</a></p>
 <aside class="notes">
-<p>Speaker: Fabian</p>
 <p>Die Präsentation findet ihr auch online hinter diesem Link.</p>
 </aside>
 </section></section>
 <section>
-<section id="tech-stack-übersicht" class="title-slide slide level1">
-<h1>Tech Stack Übersicht</h1>
+<section id="stadtpuls-tech-stack" class="title-slide slide level1">
+<h1>Stadtpuls Tech Stack</h1>
 
 </section>
 <section class="slide level2">
 
 <p><img src="assets/images/stadtpuls.com-tech-stack-cheat.png"></p>
 <aside class="notes">
-<p>Speaker: Fabian</p>
+<p>Bevor wir in unsere Topics abtauchen wollten wir kurz einen Übrblick geben welche Technologien hinter Stadtpuls stehen.</p>
 <p>Von Links</p>
 <p>Frameworks:</p>
 <ul>
@@ -164,32 +188,48 @@ Shhh, these are your private notes 📝
 <li>Fastify.js Backend (Node.js) deployed auf render.com</li>
 <li>Beide sprechen mit Supabase</li>
 </ul>
-<p>BTW (ich habe ein wenig gecheated)</p>
 </aside>
 </section>
 <section class="slide level2">
 
 <p><img src="assets/images/stadtpuls.com-tech-stack-real.png"></p>
+<aside class="notes">
+<p>BTW (ich habe ein wenig gecheated im Chart)</p>
+<ul>
+<li>Wir haben noch GitHub als VCS &amp; CI/CD mit drin</li>
+<li>und Mapbox als Kartenprovider</li>
+</ul>
+<p>Ohne sieht es aber schicker aus ;)</p>
+<p>An -&gt; Lucas</p>
+</aside>
 </section></section>
 <section>
 <section id="konvention-vor-konfiguration" class="title-slide slide level1">
 <h1>Konvention vor Konfiguration</h1>
 <aside class="notes">
 <p>Speaker: Lucas</p>
+<ul>
+<li>Keine Custom Frameworks (Don’t reinvent the wheel)</li>
+<li>Keine Homebrew UI Libraries (Aber eigene UI Komponenten)</li>
+<li>Generalisierte und weit verbreitete Tools</li>
+</ul>
+<p>erlauben schnellere Adaption und Onboarding</p>
 </aside>
 </section>
-<section id="große-community" class="slide level2">
-<h2>Große Community</h2>
+<section id="große-communities" class="slide level2">
+<h2>Große Communities</h2>
+<p><img data-src="assets/images/communities.png" /></p>
 <aside class="notes">
-<p>Speaker: Lucas</p>
-<p>React, Fastify, Postgres, etc Discord gruppen, Github Discussions, Gists, Stackoverflow, etc.</p>
+<p>Etablierte und weit verbreitete tools: - React, Fastify, Postgres, etc</p>
+<p>Große Community und Orte, um Antworten zu finden: - Discord gruppen, Github Discussions, Gists, Stackoverflow, etc.</p>
 </aside>
 </section>
 <section id="viele-resourcen" class="slide level2">
 <h2>Viele Resourcen</h2>
+<p><img data-src="assets/images/resources.png" /></p>
 <aside class="notes">
-<p>Speaker: Lucas</p>
 <p>Artikeln, Newsletters, Coder websites, … Tutorials: Youtube, Egghead, codecademy, …</p>
+<p>An -&gt; Fabian</p>
 </aside>
 </section>
 <section id="open-sourcecore" class="slide level2">
@@ -197,8 +237,9 @@ Shhh, these are your private notes 📝
 <p><img style="width:50%" src="assets/images/supabase-logo-wordmark--light.png"></p>
 <aside class="notes">
 <p>Speaker: Fabian</p>
-<p>Was ist so cool an Open Source Software und Open Core Produkten?</p>
-<p>Am Beispiel Supabase</p>
+<p>Klar wir nehmen Open source wo wir können.</p>
+<p>Aber warum? Weil es kostenlos ist? (Spoiler Nein) Was ist so cool an Open Source Software und Open Core Produkten?</p>
+<p>Schaune wir uns das mal an am Beispiel Supabase:</p>
 </aside>
 </section>
 <section id="backend-as-a-service-startup" class="slide level2">
@@ -208,14 +249,13 @@ Shhh, these are your private notes 📝
 </blockquote>
 <aside class="notes">
 <p>Selber sagen sie von sich sie seien eine OS Firebase alternative.</p>
-<p>Supabase ist ein Open Source Open Core Startup aus USA CA welches komplett remote arbeitet. Die Supabase ist noch in public Beta das bereits $30 Millionen Series A Funding erhalten hat</p>
+<p>Supabase ist ein Open Source Open Core Startup aus USA CA welches komplett remote arbeitet. Die Supabase ist noch in Public Beta haben aber bereits $30 Millionen Series A Funding erhalten hat</p>
 </aside>
 </section>
 <section class="slide level2">
 
 <p><img data-src="assets/images/supabase-tech.png" /></p>
 <aside class="notes">
-<p>Speaker: Fabian</p>
 <ul>
 <li><p>Kong (API Gateway)</p></li>
 <li><p>GoTrue (Auth System by Netlify)</p>
@@ -238,6 +278,7 @@ Shhh, these are your private notes 📝
 <li><p>Alles was das Core Produkt ausmacht ist OSS</p></li>
 <li><p>Selbst wenn Google morgen alles kauft und abschaltet kann ich den Tech Stack weiter verwenden</p></li>
 </ul>
+<p>An -&gt; Lucas</p>
 </aside>
 </section></section>
 <section>
@@ -246,24 +287,65 @@ Shhh, these are your private notes 📝
 <aside class="notes">
 <p>Speaker: Lucas</p>
 <ul>
-<li>Typescript</li>
-<li>Storybook</li>
+<li>Warum ist Dokumentation wichtig?</li>
+<li>Wie erstellen wir Dokumentation?</li>
 </ul>
-<p>Speaker: Fabian</p>
+<p>Schriftliche Dokumentation ist oft eine Bürde für Entwickler.</p>
 <ul>
-<li>Fastify JSON Schemas</li>
+<li>Sie wird im Nachhinein geschrieben (oder auch nicht)</li>
+<li>Sie wird vorab geschrieben (und stimmt dann nicht mehr mit der App überein)</li>
+</ul>
+<p>Andere Ansätze sind zB auch README Driven Development</p>
+</aside>
+</section>
+<section id="javascript" class="slide level2">
+<h2>JavaScript…</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="kw">const</span> SigninButton<span class="op">=</span> (props) <span class="kw">=&gt;</span> {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="op">&lt;&gt;&lt;</span>button onClick<span class="op">=</span>{</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    (e) <span class="kw">=&gt;</span> {</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    e<span class="op">.</span><span class="fu">preventDefault</span>()<span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(props<span class="op">.</span><span class="at">email</span><span class="op">,</span> props<span class="op">.</span><span class="at">password</span>)<span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  }}<span class="op">/&gt;&lt;/&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
+<!-- SPACE OBEN LASSEN - Sorgt dafür, dass die slides nicht so springen -->
+<aside class="notes">
+<p>Speaker: Lucas</p>
+<p>Javascript dokumentiert nicht der code:</p>
+<ul>
+<li>Woher weiss ich welche Typen meine props bekommen sollten?</li>
 </ul>
 </aside>
 </section>
-<section id="typescript" class="slide level2">
-<h2>Typescript</h2>
+<section id="versus-typescript" class="slide level2">
+<h2>…Versus Typescript</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode jsx"><code class="sourceCode javascriptreact"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">interface</span> SigninProps {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">email</span><span class="op">:</span> string<span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">password</span><span class="op">:</span> string<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="kw">const</span> SigninButton<span class="op">:</span> React<span class="op">.</span><span class="at">FC</span><span class="op">&lt;</span>SigninProps<span class="op">&gt;</span> <span class="op">=</span> ({</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  email<span class="op">,</span> password</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>}) <span class="kw">=&gt;</span> {</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return </span><span class="kw">&lt;&gt;&lt;button</span> <span class="ot">onClick</span><span class="op">=</span><span class="va">{</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    (e<span class="op">:</span> React<span class="op">.</span><span class="at">ChangeEvent</span><span class="op">&lt;</span>any<span class="op">&gt;</span>) <span class="kw">=&gt;</span> {</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    e<span class="op">.</span><span class="fu">preventDefault</span>()<span class="op">;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(email<span class="op">,</span> password)<span class="op">;</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  }<span class="va">}</span><span class="kw">/&gt;&lt;/&gt;</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <aside class="notes">
 <p>Speaker: Lucas</p>
+<p>Static Typechecking erlaubt:</p>
 <ul>
 <li>Dokumentiert Funktionen &amp; Variabeln</li>
 <li>Warnt vor mögliche Fehlern</li>
 <li>Bietet Autovervollständigung</li>
 </ul>
+<p>An -&gt; Fabian</p>
 </aside>
 </section>
 <section id="fastify-json-schemas" class="slide level2">
@@ -274,40 +356,75 @@ Shhh, these are your private notes 📝
 <p>Unser Backend Framework “Fastify” ist nicht nur schnell, wie der Name impliziert, sondern bietet auch eine ein gute DX.</p>
 <p>Durch JSON Schemas können HTTP Anfragen validiert werden. Vorteile sind:</p>
 <ul>
-<li>Keine Fleissarbeit im validieren von Request Bodies, Headern, Parametern oder Querystrings</li>
-<li>Keine Fleissarbeit im schreiben von Error Handlern</li>
-<li>Dokumentation der Möglichkeiten einer Route in Code</li>
+<li>Keine Fleissarbeit im Validieren von Request Bodies, Headern, Parametern oder Querystrings</li>
+<li>Keine Fleissarbeit im Schreiben von Error Handlern und Error Responses</li>
+<li>Dokumentation der Möglichkeiten/Anforderungen eines Endpoints in Code</li>
 </ul>
 </aside>
 </section>
-<section id="bsp.-json-schema" class="slide level2">
-<h2>Bsp.: JSON Schema</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;$id&quot;</span><span class="fu">:</span> <span class="st">&quot;https://example.com/cat.schema.json&quot;</span><span class="fu">,</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;title&quot;</span><span class="fu">:</span> <span class="st">&quot;cat&quot;</span><span class="fu">,</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;object&quot;</span><span class="fu">,</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;properties&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;description&quot;</span><span class="fu">:</span> <span class="st">&quot;The cat&#39;s name.&quot;</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">},</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;mood&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;description&quot;</span><span class="fu">:</span> <span class="st">&quot;The mood the cat is in.&quot;</span><span class="fu">,</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;enum&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;grumpy&quot;</span><span class="ot">,</span> <span class="st">&quot;happy&quot;</span><span class="ot">,</span> <span class="st">&quot;purrrr!&quot;</span><span class="ot">]</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;required&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;mood&quot;</span><span class="ot">]</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<section id="json-schema" class="slide level2">
+<h2>JSON Schema</h2>
+<p>POST http://example.com/api/cats</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;$id&quot;</span><span class="fu">:</span> <span class="st">&quot;https://example.com/api/cats.schema.json&quot;</span><span class="fu">,</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;title&quot;</span><span class="fu">:</span> <span class="st">&quot;cats&quot;</span><span class="fu">,</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;object&quot;</span><span class="fu">,</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;additionalProperties&quot;</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;properties&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;description&quot;</span><span class="fu">:</span> <span class="st">&quot;The cat&#39;s name.&quot;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">},</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;mood&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;description&quot;</span><span class="fu">:</span> <span class="st">&quot;The mood the cat is in.&quot;</span><span class="fu">,</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;enum&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;grumpy&quot;</span><span class="ot">,</span> <span class="st">&quot;happy&quot;</span><span class="ot">,</span> <span class="st">&quot;purrrr!&quot;</span><span class="ot">]</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;required&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;mood&quot;</span><span class="ot">]</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<aside class="notes">
+<p>Hier ein Beispiel Schema für meine fiktive Katzen API</p>
+<p>Dieses JSON beschreibt:</p>
+<ul>
+<li>Welche Eigenschaften erlaubt sind</li>
+<li>Welche Eigenschaften vorgeschrieben sind</li>
+<li>Welche Möglichkeiten für zB mood zur Verfügung stehen</li>
+<li>Das keine zusätzlichen Eigenschaften erlaubt sind</li>
+</ul>
+</aside>
 </section>
-<section id="bsp.-json" class="slide level2">
-<h2>Bsp.: JSON</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;Mister Fuzzyboots&quot;</span><span class="fu">,</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;mood&quot;</span><span class="fu">:</span> <span class="st">&quot;purrrr!&quot;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<section id="request-201" class="slide level2">
+<h2>Request 201</h2>
+<pre class="http"><code>POST /api/cats HTTP/1.1
+Host: example.com
+Content-Type: application/json
+
+{&quot;mood&quot;: &quot;purrrr!&quot;}</code></pre>
+<aside class="notes">
+<p>Dies wäre ein POST Request der diesem Schema entspricht. Somit bekommen wir ein 201 zurück und alles ist gut.</p>
+</aside>
+</section>
+<section id="request-400" class="slide level2">
+<h2>Request 400</h2>
+<pre class="http"><code>POST /api/cats HTTP/1.1
+Host: example.com
+Content-Type: application/json
+
+{&quot;mood&quot;: &quot;purrrr!&quot;, &quot;saz&quot;: &quot;I hate Mondays!&quot;}
+</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;statusCode&quot;</span><span class="fu">:</span> <span class="dv">400</span><span class="fu">,</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;error&quot;</span><span class="fu">:</span> <span class="st">&quot;Bad Request&quot;</span><span class="fu">,</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;message&quot;</span><span class="fu">:</span> <span class="st">&quot;body should NOT have additional properties&quot;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<aside class="notes">
+<p>Wenn das Schema auf eine Route angwandt ist würde uns Fastify eine 400 Response senden. All das passiert, ohne dass ich eine spezielle Funktion schreibe die den Body validiert.</p>
+<p>An -&gt; Lucas</p>
+</aside>
 </section>
 <section id="storybook" class="slide level2">
 <h2>Storybook</h2>
+<p><img data-src="assets/images/storybook.png" /></p>
 <aside class="notes">
 <p>Speaker: Lucas</p>
 <ul>
@@ -348,6 +465,7 @@ Shhh, these are your private notes 📝
 <li>Lässt in isolation testen und entwickeln</li>
 <li>Kann für snapshot testing verwendet werden</li>
 </ul>
+<p>An -&gt; Fabian</p>
 </aside>
 </section>
 <section id="code-reviews" class="slide level2">
@@ -366,23 +484,33 @@ Shhh, these are your private notes 📝
 <li>eine gemeinsame Code-Qualität zu erhalten und aber auch</li>
 <li>Fehler zu sehen die CI/CD oder Testing nicht sehen.</li>
 </ul>
-<p>Ein weiterer Effekt ist, dass das Teammitglider so auch Einblick in Bereiche der Applikation erhält an denen sie selber gar nicht arbeiten.</p>
+<p>Ein weiterer Effekt ist, dass das Teammitglider so auch Einblick in Bereiche der Applikation erhält an denen sie selber gar nicht arbeiten und damit der BUS Faktor reduziert wird.</p>
 </aside>
 </section>
 <section id="github-actions" class="slide level2">
 <h2>Github Actions</h2>
-<p>Bei jeder PR/Push</p>
+<ul>
+<li>CI (Continuous Integration)</li>
+<li>CD (Continuous Delivery)</li>
+<li>CD (Continuous Deployment)</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p><img src="assets/images/cicd.png"></p>
 <aside class="notes">
-<p>Speaker: Fabian</p>
-<p>Zu den Codereviews lassen wir bei jedem Pull Request und auch Push zu einem Branch alle Tests auf dem CI/CD System laufen. Wenn ein Test Fehler wirft wird auch nicht gemerged.</p>
+<ul>
+<li>CI Continuous Integration. Zu den Codereviews lassen wir bei jedem Pull Request und auch Push zu einem Branch alle Tests + builds via GitHub Actions laufen. Wenn ein Test Fehler wirft wird auch nicht gemerged.</li>
+<li>CD Continuous Delivery. Wennn alles geht und der Codereviews auch passt kann in staging gemerged werden</li>
+<li>CD Continuous Deployment. Sobald auf staging alles gut aussieht kann in main gemerged werden und die Applikationen wird automatisch zu render.com oder vercel.com deployed und ist live in production</li>
+</ul>
 <p>Kein: Works on my Machine!</p>
 </aside>
 </section>
 <section id="staging-environments" class="slide level2">
 <h2>Staging Environments</h2>
 <aside class="notes">
-<p>Speaker: Fabian</p>
-<p>Des weiteren haben wir die gesamte Applikation dupliziert und können alle neuen Features online testen.</p>
+<p>Des weiteren haben wir die gesamte Applikation dupliziert und können alle neuen Features online testen bevor wir sie in Production senden.</p>
 <p>Kein “Testing in Production”</p>
 </aside>
 </section></section>
@@ -410,83 +538,10 @@ Shhh, these are your private notes 📝
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-        // Determines whether slide content should be vertically centered
-        center: true,
-        // Display controls in the bottom right corner
-        controls: true,
-        // Help the user learn the controls by providing hints, for example by
-        // bouncing the down arrow when they first encounter a vertical slide
-        controlsTutorial: true,
-        // Determines where controls appear, "edges" or "bottom-right"
-        controlsLayout: 'bottom-right',
-        // Visibility rule for backwards navigation arrows; "faded", "hidden"
-        // or "visible"
-        controlsBackArrows: 'faded',
-        // Display a presentation progress bar
-        progress: true,
-        // 'all', 'print', or 'speaker'
-        showSlideNumber: 'all',
         // Push each slide change to the browser history
         history: true,
-        // Enable keyboard shortcuts for navigation
-        keyboard: true,
-        // Enable the slide overview mode
-        overview: true,
-        // Vertical centering of slides
-        center: true,
-        // Enables touch navigation on devices with touch input
-        touch: true,
-        // see https://revealjs.com/vertical-slides/#navigation-mode
-        navigationMode: 'default',
-        // Turns fragments on and off globally
-        fragments: true,
-        // Flags whether to include the current fragment in the URL,
-        // so that reloading brings you to the same fragment position
-        fragmentInURL: true,
-        // Flags if we should show a help overlay when the questionmark
-        // key is pressed
-        help: true,
-       // Flags if it should be possible to pause the presentation (blackout)
-       pause: true,
-        // Global override for autoplaying embedded media (video/audio/iframe)
-        // - null: Media will only autoplay if data-autoplay is present
-        // - true: All media will autoplay, regardless of individual setting
-        // - false: No media will autoplay, regardless of individual setting
-        autoPlayMedia: null,
-        // Global override for preloading lazy-loaded iframes
-        // - null: Iframes with data-src AND data-preload will be loaded when within
-        //   the viewDistance, iframes with only data-src will be loaded when visible
-        // - true: All iframes with data-src will be loaded when within the viewDistance
-        // - false: All iframes with data-src will be loaded only when visible
-        preloadIframes: null,
-        // Number of milliseconds between automatically proceeding to the
-        // next slide, disabled when set to 0, this value can be overwritten
-        // by using a data-autoslide attribute on your slides
-        autoSlide: 0,
-        // Stop auto-sliding after user input
-        autoSlideStoppable: true,
-        // Use this method for navigation when auto-sliding
-        autoSlideMethod: null,
-        // Specify the average time in seconds that you think you will spend
-        // presenting each slide. This is used to show a pacing timer in the
-        // speaker view
-        defaultTiming: null,
-        // Hide cursor if inactive
-        hideInactiveCursor: true,
-        // Time before the cursor is hidden (in ms)
-        hideCursorTime: 5000,
         // Transition style
         transition: 'fade', // none/fade/slide/convex/concave/zoom
-        // Transition speed
-        transitionSpeed: 'default', // default/fast/slow
-        // Transition style for full page slide backgrounds
-        backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
-        // Number of slides away from the current that are visible
-        viewDistance: 3,
-        // Number of slides away from the current that are visible on mobile
-        // devices. It is advisable to set this to a lower number than
-        // viewDistance in order to save resources.
-        mobileViewDistance: 2,
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
@@ -497,8 +552,6 @@ Shhh, these are your private notes 📝
         // Bounds for smallest/largest possible scale to apply to content
         minScale: 1,
         maxScale: 1,
-        // The display mode that will be used to show slides
-        display: 'block',
 
         // reveal.js plugins
         plugins: [

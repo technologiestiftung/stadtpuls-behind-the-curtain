@@ -2,14 +2,14 @@
 build:
 	@pandoc \
 	--to=revealjs \
-	--highlight-style=monochrome \
+	--highlight-style=haddock \
 	--template=src/default.revealjs \
 	--standalone \
 	--output=docs/index.html \
 	src/slides.md \
 	--metadata title="[api.]stadtpuls.com" \
 	--metadata subtitle="/behind/the/curtain" \
-	--metadata author="Lucas Vogel & Fabian Morón Zirfas" \
+	--metadata author="Julia Zimmermann, Ingo Hinterding, Dennis Ostendorf, Lucas Vogel & Fabian Morón Zirfas" \
 	--metadata date="2021-10-20" \
 	--slide-level=2 \
 	--variable theme=simple \

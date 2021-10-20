@@ -1,0 +1,25 @@
+digraph G {
+  rankdir= LR;
+  node [shape = box];
+  CI [label="Continuous Integration", shape=box];
+  CD1 [label="Continuous Delivery", shape=box];
+  CD2 [label="Continuous Deployment", shape=box];
+
+  CI-> CD1 -> CD2;
+
+  subgraph cluster_0 {
+
+  Build->Test->Merge;
+  }
+
+subgraph cluster_1 {
+  staging[label="Automatic release to staging"];
+  }
+  Merge->staging;
+
+subgraph cluster_2 {
+  production[label="Automatic deploy to production"];
+  }
+  staging->production;
+
+}

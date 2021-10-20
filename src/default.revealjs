@@ -70,7 +70,7 @@ $if(subtitle)$
   <p class="subtitle">$subtitle$</p>
 $endif$
 $for(author)$
-  <p class="author">$author$</p>
+  <p class="author" id="author">$author$</p>
 $endfor$
 $if(date)$
   <p class="date">$date$</p>
