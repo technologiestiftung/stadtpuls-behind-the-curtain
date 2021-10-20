@@ -204,8 +204,8 @@ An -&gt; Fabian
 </aside>
 </section></section>
 <section>
-<section id="konvention-vor-konfiguration" class="title-slide slide level1">
-<h1>Konvention vor Konfiguration</h1>
+<section id="worauf-wir-achten-wenn-wir-technologien-auswählen" class="title-slide slide level1">
+<h1>Worauf wir achten, wenn wir Technologien auswählen</h1>
 <aside class="notes">
 <p>Speaker: Lucas</p>
 <ul>
@@ -234,7 +234,7 @@ An -&gt; Fabian
 </section>
 <section id="open-sourcecore" class="slide level2">
 <h2>Open Source/Core</h2>
-<p><img style="width:50%" src="assets/images/supabase-logo-wordmark--light.png"></p>
+<p><img data-src="assets/images/open-core-example.svg" /></p>
 <aside class="notes">
 <p>Speaker: Fabian</p>
 <p>Klar wir nehmen Open source wo wir können.</p>
@@ -350,7 +350,7 @@ An -&gt; Fabian
 </section>
 <section id="fastify-json-schemas" class="slide level2">
 <h2>Fastify JSON Schemas</h2>
-<p><img data-src="assets/images/json-schema.png" /></p>
+<p><img data-src="assets/images/fastify-schemas.svg" /></p>
 <aside class="notes">
 <p>Speaker: Fabian</p>
 <p>Unser Backend Framework “Fastify” ist nicht nur schnell, wie der Name impliziert, sondern bietet auch eine ein gute DX.</p>
@@ -441,13 +441,9 @@ Content-Type: application/json
 <p>Speaker: Lucas</p>
 </aside>
 </section>
-<section id="testing" class="slide level2">
-<h2>Testing</h2>
-<ul>
-<li>Unit-testing</li>
-<li>Snapshot-testing</li>
-<li>Integration-testing</li>
-</ul>
+<section class="slide level2">
+
+<p><img data-src="assets/images/testing.svg" /></p>
 <aside class="notes">
 <p>Speaker: Lucas</p>
 <ul>
@@ -459,17 +455,28 @@ Content-Type: application/json
 </section>
 <section id="storybook-1" class="slide level2">
 <h2>Storybook</h2>
+<p><img data-src="assets/images/storybook-testing.png" /></p>
 <aside class="notes">
 <p>Speaker: Lucas</p>
 <ul>
 <li>Lässt in isolation testen und entwickeln</li>
-<li>Kann für snapshot testing verwendet werden</li>
+</ul>
+</aside>
+</section>
+<section id="storybook-snapshot-testing" class="slide level2">
+<h2>Storybook (Snapshot testing)</h2>
+<p><img data-src="assets/images/storybook-snapshot-example.jpg" /></p>
+<aside class="notes">
+<p>Speaker: Lucas</p>
+<ul>
+<li>Storybook Snapshots warnt vor unerwünschte UI-Veränderungen</li>
 </ul>
 <p>An -&gt; Fabian</p>
 </aside>
 </section>
 <section id="code-reviews" class="slide level2">
 <h2>Code Reviews</h2>
+<p><img data-src="assets/images/code-review.png" /></p>
 <aside class="notes">
 <p>Speaker: Fabian</p>
 <p>Da wir als Team an der gleichen Codebase arbeiten ist es hilfreich auch das Team zu allen Änderungen am Code zu konsultieren.</p>
@@ -507,8 +514,10 @@ Content-Type: application/json
 <p>Kein: Works on my Machine!</p>
 </aside>
 </section>
-<section id="staging-environments" class="slide level2">
-<h2>Staging Environments</h2>
+<section class="slide level2">
+
+<p><img data-src="assets/images/environments.svg" /></p>
+<p><a href='https://www.freepik.com/vectors/music'>Music vector created by freepik, </a> <a href='https://www.freepik.com/vectors/process'>Process vector created by stories, </a> <a href='https://www.freepik.com/vectors/technology'>and Technology vector created by freepik - www.freepik.com</a></p>
 <aside class="notes">
 <p>Des weiteren haben wir die gesamte Applikation dupliziert und können alle neuen Features online testen bevor wir sie in Production senden.</p>
 <p>Kein “Testing in Production”</p>
@@ -538,10 +547,83 @@ Content-Type: application/json
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
+        // Determines whether slide content should be vertically centered
+        center: true,
+        // Display controls in the bottom right corner
+        controls: true,
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+        // Display a presentation progress bar
+        progress: true,
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
         // Push each slide change to the browser history
         history: true,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+        // Enable the slide overview mode
+        overview: true,
+        // Vertical centering of slides
+        center: true,
+        // Enables touch navigation on devices with touch input
+        touch: true,
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+        // Turns fragments on and off globally
+        fragments: true,
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+       // Flags if it should be possible to pause the presentation (blackout)
+       pause: true,
+        // Global override for autoplaying embedded media (video/audio/iframe)
+        // - null: Media will only autoplay if data-autoplay is present
+        // - true: All media will autoplay, regardless of individual setting
+        // - false: No media will autoplay, regardless of individual setting
+        autoPlayMedia: null,
+        // Global override for preloading lazy-loaded iframes
+        // - null: Iframes with data-src AND data-preload will be loaded when within
+        //   the viewDistance, iframes with only data-src will be loaded when visible
+        // - true: All iframes with data-src will be loaded when within the viewDistance
+        // - false: All iframes with data-src will be loaded only when visible
+        preloadIframes: null,
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
         // Transition style
         transition: 'fade', // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
@@ -552,6 +634,8 @@ Content-Type: application/json
         // Bounds for smallest/largest possible scale to apply to content
         minScale: 1,
         maxScale: 1,
+        // The display mode that will be used to show slides
+        display: 'block',
 
         // reveal.js plugins
         plugins: [

@@ -108,7 +108,7 @@ An -> Lucas
 
 </aside>
 
-# Konvention vor Konfiguration
+# Worauf wir achten, wenn wir Technologien auswählen
 
 <aside class="notes">
 
@@ -151,7 +151,7 @@ An -> Fabian
 
 ## Open Source/Core
 
-<img style="width:50%" src="assets/images/supabase-logo-wordmark--light.png">
+![](assets/images/open-core-example.svg)
 
 <aside class="notes">
 
@@ -295,7 +295,7 @@ An -> Fabian
 
 ## Fastify JSON Schemas
 
-![](assets/images/json-schema.png)
+![](assets/images/fastify-schemas.svg)
 
 <aside class="notes">
 
@@ -418,11 +418,9 @@ Speaker: Lucas
 
 </aside>
 
-## Testing
+---
 
-* Unit-testing
-* Snapshot-testing
-* Integration-testing
+![](assets/images/testing.svg)
 
 <aside class="notes">
 
@@ -436,18 +434,33 @@ Speaker: Lucas
 
 ## Storybook
 
+![](assets/images/storybook-testing.png)
+
 <aside class="notes">
 
 Speaker: Lucas
 
 * Lässt in isolation testen und entwickeln
-* Kann für snapshot testing verwendet werden
+
+</aside>
+
+## Storybook (Snapshot testing)
+
+![](assets/images/storybook-snapshot-example.jpg)
+
+<aside class="notes">
+
+Speaker: Lucas
+
+* Storybook Snapshots warnt vor unerwünschte UI-Veränderungen
 
 An -> Fabian
 
 </aside>
 
 ## Code Reviews
+
+![](assets/images/code-review.png)
 
 <aside class="notes">
 
@@ -496,7 +509,13 @@ Kein: Works on my Machine!
 
 </aside>
 
-## Staging Environments
+---
+
+![](assets/images/environments.svg)
+
+<a href='https://www.freepik.com/vectors/music'>Music vector created by freepik, </a>
+<a href='https://www.freepik.com/vectors/process'>Process vector created by stories, </a>
+<a href='https://www.freepik.com/vectors/technology'>and Technology vector created by freepik - www.freepik.com</a>
 
 <aside class="notes">
 
