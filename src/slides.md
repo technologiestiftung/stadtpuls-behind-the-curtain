@@ -47,7 +47,7 @@ An -> Fabian
 # T.O.C.
 
 * Stadtpuls Tech Stack
-* Worauf wir achten, wenn wir Technologien auswählen
+* Auswahlt der Technologien
 * Dokumentation
 * Qualitätssicherung
 
