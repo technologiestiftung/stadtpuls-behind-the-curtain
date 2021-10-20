@@ -109,7 +109,7 @@ An -> Lucas
 
 </aside>
 
-# Worauf wir achten, wenn wir Technologien auswählen
+# Auswahlt der Technologien
 
 <aside class="notes">
 
