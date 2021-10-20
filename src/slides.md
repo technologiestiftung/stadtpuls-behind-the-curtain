@@ -131,6 +131,7 @@ Speaker: Lucas
 <aside class="notes">
 
 Wir verwenden gerne etablierte und weit verbreitete tools:
+
 * Z.B. React, Fastify, Postgres, etc
 * Die machen es leichter für Contributors 
 * Die sind bereits dokumentiert und 
@@ -146,6 +147,7 @@ Wir verwenden gerne etablierte und weit verbreitete tools:
 <aside class="notes">
 
 Wichtig ist: Es besteht gute Infos und Hilfe für Mitmacherinnen/Contributors
+
 * Z.B. Artikeln, Newsletters, Coder websites, Youtube Tutorials, Egghead Videos, Codecademy Kurse, usw.
 
 An -> Fabian
@@ -249,7 +251,6 @@ Speaker: Lucas
 ![](assets/images/typescript.svg)
 
 <aside class="notes">
-
 
 Speaker: Lucas
 
