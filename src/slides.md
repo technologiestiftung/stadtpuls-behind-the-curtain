@@ -36,6 +36,7 @@ An -> Lucas
 
 <aside class="notes">
 
+* Interface Designer & Web entwickler
 * Aus der Schweiz & Chile
 * In Berlin seit 10 Jahre
 * Im CityLAB seit Februar
@@ -46,7 +47,7 @@ An -> Fabian
 # T.O.C.
 
 * Stadtpuls Tech Stack
-* Konvention vor Konfiguration
+* Worauf wir achten, wenn wir Technologien auswählen
 * Dokumentation
 * Qualitätssicherung
 
@@ -114,11 +115,12 @@ An -> Lucas
 
 Speaker: Lucas
 
-* Keine Custom Frameworks (Don't reinvent the wheel)
+* Wir erfinden nicht das Rad neu
+* Keine Custom Frameworks wenn schon etablierte extistieren
 * Keine Homebrew UI Libraries (Aber eigene UI Komponenten)
-* Generalisierte und weit verbreitete Tools
-
-erlauben schnellere Adaption und Onboarding
+* Generalisierte und weit verbreitete Tools sind besser geignet in vielen aber nicht alle Fällen
+* Sie erlauben schnellere Adaption und Onboarding
+* Folgen Konvetionen statt Konfiguration zu benötigen
 
 </aside>
 
@@ -128,11 +130,12 @@ erlauben schnellere Adaption und Onboarding
 
 <aside class="notes">
 
-Etablierte und weit verbreitete tools:
-- React, Fastify, Postgres, etc
-
-Große Community und Orte, um Antworten zu finden:
-- Discord gruppen, Github Discussions, Gists, Stackoverflow, etc.
+Wir verwenden gerne etablierte und weit verbreitete tools:
+* Z.B. React, Fastify, Postgres, etc
+* Die machen es leichter für Contributors 
+* Die sind bereits dokumentiert und 
+* Es gibt Große viele Orte, wo man Antworten auf Fragen findet:
+* Z.B. Discord gruppen, Github Discussions, Gists, Stackoverflow, etc.
 
 </aside>
 
@@ -142,8 +145,8 @@ Große Community und Orte, um Antworten zu finden:
 
 <aside class="notes">
 
-Artikeln, Newsletters, Coder websites, ...
-Tutorials: Youtube, Egghead, codecademy, ...
+Wichtig ist: Es besteht gute Infos und Hilfe für Mitmacherinnen/Contributors
+* Z.B. Artikeln, Newsletters, Coder websites, Youtube Tutorials, Egghead Videos, Codecademy Kurse, usw.
 
 An -> Fabian
 
@@ -218,65 +221,32 @@ An -> Lucas
 
 Speaker: Lucas
 
-* Warum ist Dokumentation wichtig?
-* Wie erstellen wir Dokumentation?
-
-Schriftliche Dokumentation ist oft eine Bürde für Entwickler.
-
-* Sie wird im Nachhinein geschrieben (oder auch nicht)
-* Sie wird vorab geschrieben (und stimmt dann nicht mehr mit der App überein)
-
-Andere Ansätze sind zB auch README Driven Development
+* Dokumentation ist wichtig und hilft Contributors mitzumachen
+* Wir erstellen schriftliche Dokumentation, in form von Readme und Wikis
+* ABER: Schriftliche Dokumentation ist oft eine Bürde für Entwickler.
+  * Sie wird im Nachhinein geschrieben (oder auch nicht)
+  * Sie wird vorab geschrieben (und stimmt dann nicht mehr mit der App überein)
+  * Andere Ansätze sind zB auch README Driven Development
+* Wir verwenden tech, die das Code selbsterklärend macht
 
 </aside>
 
 ## JavaScript...
 
-```js
-export const SigninButton= (props) => {
-  return <><button onClick={
-    (e) => {
-    e.preventDefault();
-    console.log(props.email, props.password);
-  }}/></>
-}
-
-
-
-
-
-
-
-```
-<!-- SPACE OBEN LASSEN - Sorgt dafür, dass die slides nicht so springen -->
+![](assets/images/javascript.svg)
 
 <aside class="notes">
 
 Speaker: Lucas
 
-Javascript dokumentiert nicht der code: 
-
+* Z.B. Javascript dokumentiert nicht der code: 
 * Woher weiss ich welche Typen meine props bekommen sollten?
 
 </aside>
 
 ## ...Versus Typescript
 
-```jsx
-interface SigninProps {
-  email: string;
-  password: string;
-}
-export const SigninButton: React.FC<SigninProps> = ({
-  email, password
-}) => {
-  return <><button onClick={
-    (e: React.ChangeEvent<any>) => {
-    e.preventDefault();
-    console.log(email, password);
-  }}/></>
-}
-```
+![](assets/images/typescript.svg)
 
 <aside class="notes">
 
@@ -317,7 +287,9 @@ Vorteile sind:
 
 POST http://example.com/api/cats
 
-```json
+![](assets/images/json-schema.svg)
+
+<!-- ```json
 {
   "$id": "https://example.com/api/cats.schema.json",
   "title": "cats",
@@ -335,7 +307,7 @@ POST http://example.com/api/cats
   },
   "required": ["mood"]
 }
-```
+``` -->
 
 <aside class="notes">
 
@@ -352,13 +324,15 @@ Dieses JSON beschreibt:
 
 ## Request 201
 
-```http
+![](assets/images/201-response.svg)
+
+<!-- ```http
 POST /api/cats HTTP/1.1
 Host: example.com
 Content-Type: application/json
 
 {"mood": "purrrr!"}
-```
+``` -->
 
 <aside class="notes">
 
@@ -370,7 +344,9 @@ Somit bekommen wir ein 201 zurück und alles ist gut.
 
 ## Request 400
 
-```http
+![](assets/images/400-response.svg)
+![](assets/images/400-response-2.svg)
+<!-- ```http
 POST /api/cats HTTP/1.1
 Host: example.com
 Content-Type: application/json
@@ -385,7 +361,8 @@ Content-Type: application/json
   "error": "Bad Request",
   "message": "body should NOT have additional properties"
 }
-```
+``` -->
+
 <aside class="notes">
 
 Wenn das Schema auf eine Route angwandt ist würde uns Fastify eine 400 Response senden.

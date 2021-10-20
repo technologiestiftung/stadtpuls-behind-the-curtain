@@ -20,64 +20,6 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      {   }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span.al { color: #ff0000; } /* Alert */
-    code span.an { color: #008000; } /* Annotation */
-    code span.at { } /* Attribute */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #0000ff; } /* ControlFlow */
-    code span.ch { color: #008080; } /* Char */
-    code span.cn { } /* Constant */
-    code span.co { color: #008000; } /* Comment */
-    code span.cv { color: #008000; } /* CommentVar */
-    code span.do { color: #008000; } /* Documentation */
-    code span.er { color: #ff0000; font-weight: bold; } /* Error */
-    code span.ex { } /* Extension */
-    code span.im { } /* Import */
-    code span.in { color: #008000; } /* Information */
-    code span.kw { color: #0000ff; } /* Keyword */
-    code span.op { } /* Operator */
-    code span.ot { color: #ff4000; } /* Other */
-    code span.pp { color: #ff4000; } /* Preprocessor */
-    code span.sc { color: #008080; } /* SpecialChar */
-    code span.ss { color: #008080; } /* SpecialString */
-    code span.st { color: #008080; } /* String */
-    code span.va { } /* Variable */
-    code span.vs { color: #008080; } /* VerbatimString */
-    code span.wa { color: #008000; font-weight: bold; } /* Warning */
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/simple.css" id="theme">
@@ -143,6 +85,7 @@ Stadtpuls, Stadtpuls, Stadtpuls und Stadtpuls
 </ul>
 <aside class="notes">
 <ul>
+<li>Interface Designer &amp; Web entwickler</li>
 <li>Aus der Schweiz &amp; Chile</li>
 <li>In Berlin seit 10 Jahre</li>
 <li>Im CityLAB seit Februar</li>
@@ -155,7 +98,7 @@ An -&gt; Fabian
 <h1>T.O.C.</h1>
 <ul>
 <li>Stadtpuls Tech Stack</li>
-<li>Konvention vor Konfiguration</li>
+<li>Worauf wir achten, wenn wir Technologien auswählen</li>
 <li>Dokumentation</li>
 <li>Qualitätssicherung</li>
 </ul>
@@ -209,26 +152,27 @@ An -&gt; Fabian
 <aside class="notes">
 <p>Speaker: Lucas</p>
 <ul>
-<li>Keine Custom Frameworks (Don’t reinvent the wheel)</li>
+<li>Wir erfinden nicht das Rad neu</li>
+<li>Keine Custom Frameworks wenn schon etablierte extistieren</li>
 <li>Keine Homebrew UI Libraries (Aber eigene UI Komponenten)</li>
-<li>Generalisierte und weit verbreitete Tools</li>
+<li>Generalisierte und weit verbreitete Tools sind besser geignet in vielen aber nicht alle Fällen</li>
+<li>Sie erlauben schnellere Adaption und Onboarding</li>
+<li>Folgen Konvetionen statt Konfiguration zu benötigen</li>
 </ul>
-<p>erlauben schnellere Adaption und Onboarding</p>
 </aside>
 </section>
 <section id="große-communities" class="slide level2">
 <h2>Große Communities</h2>
 <p><img data-src="assets/images/communities.png" /></p>
 <aside class="notes">
-<p>Etablierte und weit verbreitete tools: - React, Fastify, Postgres, etc</p>
-<p>Große Community und Orte, um Antworten zu finden: - Discord gruppen, Github Discussions, Gists, Stackoverflow, etc.</p>
+<p>Wir verwenden gerne etablierte und weit verbreitete tools: * Z.B. React, Fastify, Postgres, etc * Die machen es leichter für Contributors * Die sind bereits dokumentiert und * Es gibt Große viele Orte, wo man Antworten auf Fragen findet: * Z.B. Discord gruppen, Github Discussions, Gists, Stackoverflow, etc.</p>
 </aside>
 </section>
 <section id="viele-resourcen" class="slide level2">
 <h2>Viele Resourcen</h2>
 <p><img data-src="assets/images/resources.png" /></p>
 <aside class="notes">
-<p>Artikeln, Newsletters, Coder websites, … Tutorials: Youtube, Egghead, codecademy, …</p>
+<p>Wichtig ist: Es besteht gute Infos und Hilfe für Mitmacherinnen/Contributors * Z.B. Artikeln, Newsletters, Coder websites, Youtube Tutorials, Egghead Videos, Codecademy Kurse, usw.</p>
 <p>An -&gt; Fabian</p>
 </aside>
 </section>
@@ -287,56 +231,32 @@ An -&gt; Fabian
 <aside class="notes">
 <p>Speaker: Lucas</p>
 <ul>
-<li>Warum ist Dokumentation wichtig?</li>
-<li>Wie erstellen wir Dokumentation?</li>
-</ul>
-<p>Schriftliche Dokumentation ist oft eine Bürde für Entwickler.</p>
+<li>Dokumentation ist wichtig und hilft Contributors mitzumachen</li>
+<li>Wir erstellen schriftliche Dokumentation, in form von Readme und Wikis</li>
+<li>ABER: Schriftliche Dokumentation ist oft eine Bürde für Entwickler.
 <ul>
 <li>Sie wird im Nachhinein geschrieben (oder auch nicht)</li>
 <li>Sie wird vorab geschrieben (und stimmt dann nicht mehr mit der App überein)</li>
+<li>Andere Ansätze sind zB auch README Driven Development</li>
+</ul></li>
+<li>Wir verwenden tech, die das Code selbsterklärend macht</li>
 </ul>
-<p>Andere Ansätze sind zB auch README Driven Development</p>
 </aside>
 </section>
 <section id="javascript" class="slide level2">
 <h2>JavaScript…</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="kw">const</span> SigninButton<span class="op">=</span> (props) <span class="kw">=&gt;</span> {</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="op">&lt;&gt;&lt;</span>button onClick<span class="op">=</span>{</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    (e) <span class="kw">=&gt;</span> {</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    e<span class="op">.</span><span class="fu">preventDefault</span>()<span class="op">;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(props<span class="op">.</span><span class="at">email</span><span class="op">,</span> props<span class="op">.</span><span class="at">password</span>)<span class="op">;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  }}<span class="op">/&gt;&lt;/&gt;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
-<!-- SPACE OBEN LASSEN - Sorgt dafür, dass die slides nicht so springen -->
+<p><img data-src="assets/images/javascript.svg" /></p>
 <aside class="notes">
 <p>Speaker: Lucas</p>
-<p>Javascript dokumentiert nicht der code:</p>
 <ul>
+<li>Z.B. Javascript dokumentiert nicht der code:</li>
 <li>Woher weiss ich welche Typen meine props bekommen sollten?</li>
 </ul>
 </aside>
 </section>
 <section id="versus-typescript" class="slide level2">
 <h2>…Versus Typescript</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode jsx"><code class="sourceCode javascriptreact"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">interface</span> SigninProps {</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">email</span><span class="op">:</span> string<span class="op">;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">password</span><span class="op">:</span> string<span class="op">;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="kw">const</span> SigninButton<span class="op">:</span> React<span class="op">.</span><span class="at">FC</span><span class="op">&lt;</span>SigninProps<span class="op">&gt;</span> <span class="op">=</span> ({</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  email<span class="op">,</span> password</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>}) <span class="kw">=&gt;</span> {</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return </span><span class="kw">&lt;&gt;&lt;button</span> <span class="ot">onClick</span><span class="op">=</span><span class="va">{</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    (e<span class="op">:</span> React<span class="op">.</span><span class="at">ChangeEvent</span><span class="op">&lt;</span>any<span class="op">&gt;</span>) <span class="kw">=&gt;</span> {</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    e<span class="op">.</span><span class="fu">preventDefault</span>()<span class="op">;</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(email<span class="op">,</span> password)<span class="op">;</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  }<span class="va">}</span><span class="kw">/&gt;&lt;/&gt;</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p><img data-src="assets/images/typescript.svg" /></p>
 <aside class="notes">
 <p>Speaker: Lucas</p>
 <p>Static Typechecking erlaubt:</p>
@@ -365,23 +285,26 @@ An -&gt; Fabian
 <section id="json-schema" class="slide level2">
 <h2>JSON Schema</h2>
 <p>POST http://example.com/api/cats</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;$id&quot;</span><span class="fu">:</span> <span class="st">&quot;https://example.com/api/cats.schema.json&quot;</span><span class="fu">,</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;title&quot;</span><span class="fu">:</span> <span class="st">&quot;cats&quot;</span><span class="fu">,</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;object&quot;</span><span class="fu">,</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;additionalProperties&quot;</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;properties&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;description&quot;</span><span class="fu">:</span> <span class="st">&quot;The cat&#39;s name.&quot;</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">},</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;mood&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;description&quot;</span><span class="fu">:</span> <span class="st">&quot;The mood the cat is in.&quot;</span><span class="fu">,</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;enum&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;grumpy&quot;</span><span class="ot">,</span> <span class="st">&quot;happy&quot;</span><span class="ot">,</span> <span class="st">&quot;purrrr!&quot;</span><span class="ot">]</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;required&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;mood&quot;</span><span class="ot">]</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<p><img data-src="assets/images/json-schema.svg" /></p>
+<!-- ```json
+{
+  "$id": "https://example.com/api/cats.schema.json",
+  "title": "cats",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The cat's name."
+    },
+    "mood": {
+      "description": "The mood the cat is in.",
+      "enum": ["grumpy", "happy", "purrrr!"]
+    }
+  },
+  "required": ["mood"]
+}
+``` -->
 <aside class="notes">
 <p>Hier ein Beispiel Schema für meine fiktive Katzen API</p>
 <p>Dieses JSON beschreibt:</p>
@@ -395,28 +318,36 @@ An -&gt; Fabian
 </section>
 <section id="request-201" class="slide level2">
 <h2>Request 201</h2>
-<pre class="http"><code>POST /api/cats HTTP/1.1
+<p><img data-src="assets/images/201-response.svg" /></p>
+<!-- ```http
+POST /api/cats HTTP/1.1
 Host: example.com
 Content-Type: application/json
 
-{&quot;mood&quot;: &quot;purrrr!&quot;}</code></pre>
+{"mood": "purrrr!"}
+``` -->
 <aside class="notes">
 <p>Dies wäre ein POST Request der diesem Schema entspricht. Somit bekommen wir ein 201 zurück und alles ist gut.</p>
 </aside>
 </section>
 <section id="request-400" class="slide level2">
 <h2>Request 400</h2>
-<pre class="http"><code>POST /api/cats HTTP/1.1
+<p><img data-src="assets/images/400-response.svg" /> <img data-src="assets/images/400-response-2.svg" /> <!-- ```http
+POST /api/cats HTTP/1.1
 Host: example.com
 Content-Type: application/json
 
-{&quot;mood&quot;: &quot;purrrr!&quot;, &quot;saz&quot;: &quot;I hate Mondays!&quot;}
-</code></pre>
-<div class="sourceCode" id="cb6"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;statusCode&quot;</span><span class="fu">:</span> <span class="dv">400</span><span class="fu">,</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;error&quot;</span><span class="fu">:</span> <span class="st">&quot;Bad Request&quot;</span><span class="fu">,</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;message&quot;</span><span class="fu">:</span> <span class="st">&quot;body should NOT have additional properties&quot;</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+{"mood": "purrrr!", "saz": "I hate Mondays!"}
+
+```
+
+```json
+{
+  "statusCode": 400,
+  "error": "Bad Request",
+  "message": "body should NOT have additional properties"
+}
+``` --></p>
 <aside class="notes">
 <p>Wenn das Schema auf eine Route angwandt ist würde uns Fastify eine 400 Response senden. All das passiert, ohne dass ich eine spezielle Funktion schreibe die den Body validiert.</p>
 <p>An -&gt; Lucas</p>
