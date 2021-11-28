@@ -11,7 +11,7 @@
     "reload": "3.1.1"
   },
   "devDependencies": {
-    "decktape": "3.1.0"
+    "decktape": "3.4.0"
   },
   "repository": {
     "type": "git",
